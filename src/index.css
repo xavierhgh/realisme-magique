@@ -1,3 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+@font-face {
+  font-family: 'flowerpower';
+  src: url('./fonts/flowerpower.ttf') format('truetype')
+}
+
+
+body {
+  @apply bg-noir text-blanc;
+}
+
+h1 {
+  @apply font-flower text-primary text-[3rem] text-center;
+}
+
+h2 {
+  @apply font-flower text-primary text-[2rem] text-center;
+}
+
+h3 {
+  @apply font-flower text-primary text-[1.5rem] text-center;
+}
+
+h4 {
+  @apply font-flower text-primary text-[1.25rem] text-center;
+}
+
+button {
+  @apply font-roboto text-[1.125rem] text-center;
+}
+
+.text-more {
+  @apply font-roboto text-[1.125rem] text-center;
+}
+
+p {
+  @apply font-roboto text-[1rem] text-center;
+}

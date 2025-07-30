@@ -2,6 +2,7 @@
 module.exports = {
   content: [
     "./src/**/*.{js,jsx,ts,tsx}",
+    "./src/*.{js,jsx,ts,tsx}",
   ],
   theme: {
     colors: {
@@ -11,7 +12,11 @@ module.exports = {
       'blanc60': '#F4F1EC opacity(0.6)',
       'primary': '#65BD47',
       'secondary': '#3F742F',
-      'accent': '#6FBA40',
+      'accentuation': '#6FBA40',
+    },
+    fontFamily: {
+      flower: ['flowerpower'],
+      roboto: ['Roboto', 'sans-serif'],
     },
     extend: {},
   },
