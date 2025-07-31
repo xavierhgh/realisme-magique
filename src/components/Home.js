@@ -1,11 +1,17 @@
-import React from 'react';
+import React from "react";
+import Hero from "./Hero";
+import Section from "./Section";
+import Jsonhome from "../data/Jsonhome";
 
-function Home() {
-    return (
-        <div className='h-[90svh]'>
-            <h1>Home page</h1>
-        </div>
-    );
+function Home({titre, texte}) {
+  return (
+    <div>
+      <Hero />
+      {Jsonhome.map((item, index) => (
+        <Section key={index} img={item.img} titre={item.titre} texte={item.texte} />
+      ))}
+    </div>
+  );
 }
 
 export default Home;
