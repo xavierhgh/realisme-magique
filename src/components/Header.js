@@ -12,7 +12,7 @@ function Header() {
   ];
 
   return (
-    <header className="p-4 border-b border-accentuation sm:flex justify-between items-center">
+    <header className="p-5 border-b border-accentuation sm:flex justify-between items-center">
       {/* Top section: logo + info + burger */}
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-6">

@@ -1,9 +1,10 @@
 import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "./Header";
 import Home from "./Home";
 import Galerie from "./Galerie";
 import Contact from "./Contact";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Footer from "./Footer";
 
 function Main() {
   return (
@@ -16,6 +17,7 @@ function Main() {
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </div>
+      <Footer />
     </BrowserRouter>
   );
 }

@@ -5,7 +5,7 @@ import LogoPartenaire from './LogoPartenaire';
 
 function Partenaire() {
     return (
-        <div>
+        <div className="mx-5 my-6">
             <h2 className="">Nos Partenaires</h2>
             <LogoPartenaire src={federationLogo} alt="Fédération Wallonie-Bruxelles" className="w-1/2 mx-auto my-8" />
             <div className="bg-accentuation h-1 w-1/2 mx-auto my-8"></div>
