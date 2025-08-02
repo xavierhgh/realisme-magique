@@ -13,6 +13,7 @@ module.exports = {
       'primary': '#65BD47',
       'secondary': '#3F742F',
       'accentuation': '#6FBA40',
+      'rouge': '#BD4747',
     },
     fontFamily: {
       flower: ['flowerpower'],

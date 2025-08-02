@@ -1,10 +1,7 @@
 <?php 
-// Affiche les erreurs (utile en dev)
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
+// aide avec une vidéo https://youtu.be/Ou-RUuujpXY https://youtu.be/c25pkDJ1xUI
 
-// Autoriser CORS pour les requêtes cross-domain (localhost → domaine)
+// CORS
 header("Access-Control-Allow-Origin: *");
 header("Access-Control-Allow-Methods: POST, OPTIONS");
 header("Access-Control-Allow-Headers: Content-Type");

@@ -37,12 +37,12 @@ function Concours() {
         });
         console.log(response);
 
-        if(response.ok) {
+        if (response.ok) {
           setSubmitted(true);
         } else {
           setErrors({
-            api:"Il y a eu une erreur lors de l'envoi du formulaire. Veuillez réessayer."
-          })
+            api: "Il y a eu une erreur lors de l'envoi du formulaire. Veuillez réessayer.",
+          });
         }
       } catch (error) {
         console.error("Error submitting form:", error);
@@ -80,7 +80,15 @@ function Concours() {
     return errors;
   };
   if (submitted) {
-    return <div>GG ! Vous avez participé au concours.</div>;
+    return (
+      <div className="m-5">
+        <h2 className="mt-6 mb-9">Concours</h2>
+        <p className="text-more text-accentuation">
+          Merci d'avoir participé au concours ! Vous recevrez un mail si vous
+          avez gagné.
+        </p>
+      </div>
+    );
   }
   return (
     <div className="m-5">
@@ -127,16 +135,17 @@ function Concours() {
             error={errors.confirm_email}
             onChange={handleChange}
           />
-
-          <button
-            className="bg-primary text-more p-2 rounded hover:bg-accentuation transition-colors"
-            type="submit"
-            disabled={isSubmitting}
-          >
-            Participer
-          </button>
-          {isSubmitting && <p>Envoi en cours...</p>}
-          {errors.api && <p className="text-red-500">{errors.api}</p>}
+          <div className="my-4 flex flex-col items-center gap-4">
+            <button
+              className="bg-primary text-more p-4 hover:bg-accentuation transition-colors "
+              type="submit"
+              disabled={isSubmitting}
+            >
+              Participer
+            </button>
+            {isSubmitting && <p className="text-less">Envoi en cours...</p>}
+            {errors.api && <p className="text-less text-rouge">{errors.api}</p>}
+          </div>
         </form>
       </div>
     </div>

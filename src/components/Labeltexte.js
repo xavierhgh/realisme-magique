@@ -14,7 +14,7 @@ function Labeltexte({ label, id, placeholder, value, type, onChange, error }) {
             className="text-less border w-full border-primary p-2"
           />
           {error && (
-            <span>{error}</span>
+            <p className='text-less a text-rouge font-bold'>{error}</p>
           )}
         </div>
     );
