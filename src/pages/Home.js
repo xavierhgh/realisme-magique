@@ -1,9 +1,9 @@
 import React from "react";
-import Hero from "./Hero";
-import Section from "./Section";
+import Hero from "../components/Hero";
+import Section from "../components/Section";
 import Jsonhome from "../data/Jsonhome";
-import Concours from "./Concours";
-import Partenaire from "./Partenaire";
+import Concours from "../components/Concours";
+import Partenaire from "../components/Partenaire";
 
 
 function Home({titre, texte}) {

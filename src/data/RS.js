@@ -1,4 +1,8 @@
 import fbsvg from "../images/facebook-svgrepo-com.svg";
+import Instasvg from "../images/instagram-svgrepo-com.svg";
+import Xsvg from "../images/X.svg";
+import Youtubesvg from "../images/youtube-svgrepo-com.svg";
+import Tiktoksvg from "../images/tiktok-svgrepo-com.svg";
 
 const RS = [
     {
@@ -8,18 +12,23 @@ const RS = [
     },
     {
         href: "https://www.twitter.com",
-        text: "Twitter",
-        icon: fbsvg,
+        text: "X / Twitter",
+        icon: Xsvg,
     },
     {
         href: "https://www.instagram.com",
         text: "Instagram",
-        icon: fbsvg,
+        icon: Instasvg,
     },
     {
-        href: "https://www.linkedin.com",
-        text: "LinkedIn",
-        icon: fbsvg,
+        href: "https://www.youtube.com",
+        text: "Youtube",
+        icon: Youtubesvg,
+    },
+    {
+        href: "https://www.tiktok.com",
+        text: "TikTok",
+        icon: Tiktoksvg,
     },
 ]
 

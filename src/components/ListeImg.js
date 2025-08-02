@@ -2,11 +2,12 @@ import React from 'react';
 
 function ListeImg({href, text, icon}) {
     return (
-          <li>
+          <li className='w-full font-roboto text-[1.125rem]'>
             <a
               href={href}
               target="_blank"
               rel="noopener noreferrer"
+              className='w-full'
             >
               <img
                 src={icon}
