@@ -59,6 +59,6 @@ button,
   @apply font-roboto text-[1.125rem] text-center;
 }
 
-p {
-  @apply font-roboto text-[1rem] text-center;
+p, .text-less {
+  @apply font-roboto text-[1rem];
 }
