@@ -3,8 +3,8 @@ import React from 'react';
 function Liste({ jour, heures }) {
     return (
         <li>
-            <p className="text-more">{jour}</p>
-            <p className="text-more">{heures}</p>
+            <p className="font-roboto text-[1.125rem]">{jour}</p>
+            <p className="font-roboto text-[1.125rem]">{heures}</p>
         </li>
     );
 }

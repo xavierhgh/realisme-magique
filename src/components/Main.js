@@ -5,6 +5,7 @@ import Home from "../pages/Home";
 import Galerie from "../pages/Galerie";
 import Contact from "../pages/Contact";
 import Footer from "./Footer";
+import OeuvreDetail from "../pages/OeuvreDetail";
 
 function Main() {
   return (
@@ -15,6 +16,7 @@ function Main() {
           <Route path="/" element={<Home />} />
           <Route path="/galerie" element={<Galerie />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/oeuvre/:id" element={<OeuvreDetail />} />
         </Routes>
       </div>
       <Footer />

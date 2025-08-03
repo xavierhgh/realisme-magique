@@ -35,7 +35,6 @@ function Concours() {
           },
           body: JSON.stringify(formData),
         });
-        console.log(response);
 
         if (response.ok) {
           setSubmitted(true);

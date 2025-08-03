@@ -1,8 +1,9 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
-function Oeuvre({ img, alt, title, by }) {
+function Oeuvre({id, img, alt, title, by, category }) {
   return (
-    <div className="relative">
+    <Link to={`/oeuvre/${id}`} className={`relative grid-item ${category}`}>
       <div className="bg-accentuation rounded-br-[10rem]">
         {/* <div className="triangle inline-block absolute top-[100%] -translate-y-[100%] right-0 h-0 w-0 border-b-[8px] border-l-[200px] border-l-transparent triangle"></div> */}
         <div className="p-2">
@@ -13,7 +14,7 @@ function Oeuvre({ img, alt, title, by }) {
           </div>
         </div>
       </div>
-    </div>
+    </Link>
   );
 }
 

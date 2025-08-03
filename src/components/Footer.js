@@ -4,7 +4,7 @@ import ListeImg from "./ListeImg";
 import RS from "../data/RS";
 import Liste from "./Liste";
 import HeureOuverture from "../data/HeureOuverture";
-import Contact from "../data/Contact";
+import Contacts from "../data/Contacts";
 
 function Footer() {
   return (
@@ -29,7 +29,7 @@ function Footer() {
       <div className="flex flex-col items-center">
         <h4>Contact</h4>
         <ul className="flex flex-col justify-center gap-2 my-4">
-        {Contact.map((item, index) => (
+        {Contacts.map((item, index) => (
             <ListeImg key={index} icon={item.icon} href={item.href} text={item.text} />
         ))}
         </ul>
