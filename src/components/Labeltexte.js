@@ -2,7 +2,7 @@ import React from 'react';
 
 function Labeltexte({ label, id, placeholder, value, type, onChange, error, className }) {
     return (
-        <div className={`flex flex-col gap-2`}>
+        <div className={`flex flex-col gap-2 w-full`}>
           <label htmlFor={id} className="text-more flex flex-col items-start gap-2">{label} :</label>
           <input
             type={type}

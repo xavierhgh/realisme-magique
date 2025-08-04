@@ -104,6 +104,7 @@ function Concours() {
         </p>
       </div>
       <form className="flex flex-col gap-4 sm:w-1/2" onSubmit={handleSubmit}>
+      <div className="flex flex-row gap-4">
         <Labeltexte
           label="Nom"
           id="name"
@@ -122,6 +123,7 @@ function Concours() {
           error={errors.firstname}
           onChange={handleChange}
         />
+      </div>
         <Labeltexte
           label="Email"
           id="email"
