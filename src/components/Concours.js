@@ -90,63 +90,68 @@ function Concours() {
     );
   }
   return (
-    <div className="m-5">
-      <h2 className="mt-6 mb-9">Concours</h2>
-      <div className="flex flex-col gap-4">
+    <div className="padding flex flex-col sm:flex-row gap-8">
+      <div className="flex flex-col gap-4 sm:w-1/2">
+        <h2 className="mt-6 mb-5">Concours</h2>
         <p>
-          Participez à notre concours et remportez une place gratuite pour une
-          exposition exceptionnelle !
+          Vous rêvez de découvrir une exposition exceptionnelle sans dépenser un
+          centime ? C’est le moment de tenter votre chance ! Participez dès
+          maintenant à notre concours et remportez une place gratuite pour vivre
+          une expérience inoubliable.
         </p>
-        <form onSubmit={handleSubmit}>
-          <Labeltexte
-            label="Nom"
-            id="name"
-            placeholder="Doe"
-            value={formData.name}
-            type="text"
-            error={errors.name}
-            onChange={handleChange}
-          />
-          <Labeltexte
-            label="Prénom"
-            id="firstname"
-            placeholder="John"
-            value={formData.firstname}
-            type="text"
-            error={errors.firstname}
-            onChange={handleChange}
-          />
-          <Labeltexte
-            label="Email"
-            id="email"
-            placeholder="john.doe@example.com"
-            value={formData.email}
-            type="text"
-            error={errors.email}
-            onChange={handleChange}
-          />
-          <Labeltexte
-            label="Confirmation Email"
-            id="confirm_email"
-            placeholder="john.doe@example.com"
-            value={formData.confirm_email}
-            type="text"
-            error={errors.confirm_email}
-            onChange={handleChange}
-          />
-          <div className="my-4 flex flex-col items-center gap-4">
-            <button
-              className="bg-primary text-more p-4 hover:bg-accentuation transition-colors "
-              type="submit"
-              disabled={isSubmitting}
-            >
-              Participer
-            </button>
-            {isSubmitting && <p className="text-less">Envoi en cours...</p>}
-            {errors.api && <p className="text-less text-rouge">{errors.api}</p>}
-          </div>
-        </form>
+        <p>
+          Pour participer, il vous suffit de remplir le formulaire ci-contre. Bonne chance ! 
+        </p>
       </div>
+      <form className="flex flex-col gap-4 sm:w-1/2" onSubmit={handleSubmit}>
+        <Labeltexte
+          label="Nom"
+          id="name"
+          placeholder="Doe"
+          value={formData.name}
+          type="text"
+          error={errors.name}
+          onChange={handleChange}
+        />
+        <Labeltexte
+          label="Prénom"
+          id="firstname"
+          placeholder="John"
+          value={formData.firstname}
+          type="text"
+          error={errors.firstname}
+          onChange={handleChange}
+        />
+        <Labeltexte
+          label="Email"
+          id="email"
+          placeholder="john.doe@example.com"
+          value={formData.email}
+          type="text"
+          error={errors.email}
+          onChange={handleChange}
+        />
+        <Labeltexte
+          label="Confirmation Email"
+          id="confirm_email"
+          placeholder="john.doe@example.com"
+          value={formData.confirm_email}
+          type="text"
+          error={errors.confirm_email}
+          onChange={handleChange}
+        />
+        <div className="my-4 flex flex-col items-center gap-4">
+          <button
+            className="bg-primary text-more p-4 hover:bg-accentuation transition-colors "
+            type="submit"
+            disabled={isSubmitting}
+          >
+            Participer
+          </button>
+          {isSubmitting && <p className="text-less">Envoi en cours...</p>}
+          {errors.api && <p className="text-less text-rouge">{errors.api}</p>}
+        </div>
+      </form>
     </div>
   );
 }

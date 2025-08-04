@@ -19,6 +19,9 @@
   padding: 0;
   box-sizing: border-box;
 }
+.container {
+  max-width: none;
+}
 
 html {
   font-size: 16px;
@@ -33,6 +36,9 @@ body {
   @apply bg-noir text-blanc;
 }
 
+.padding {
+  @apply p-5 sm:px-[3.75rem];
+}
 
 h1>span {
   @apply font-flower leading-none text-primary text-[4rem] text-center;

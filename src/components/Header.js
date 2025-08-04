@@ -12,8 +12,7 @@ function Header() {
   ];
 
   return (
-    <header className="p-5 border-b border-accentuation sm:flex justify-between items-center">
-      {/* Top section: logo + info + burger */}
+    <header className="padding border-b border-accentuation sm:flex justify-between items-center">
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-6">
           <img
@@ -27,7 +26,7 @@ function Header() {
             Ouvert Aujourd'hui
           </p>
         </div>
-        {/* Burger menu button visible only on mobile */}
+        {/* Burger menu visible que sur mobile */}
         <button
           className="text-4xl sm:hidden"
           onClick={() => setMenuOpen(!menuOpen)}
@@ -35,18 +34,18 @@ function Header() {
           {menuOpen ? "✕" : "☰"}
         </button>
       </div>
-      {/* Navigation visible on both mobile and desktop */}
+      {/* Navigation visible pour le mobile et desktop */}
         <nav
           className={`${
             menuOpen ? "block" : "hidden"
           } sm:block transition-all`}
         >
-          <ul className="flex flex-col items-center sm:flex-row gap-4 mt-4">
+          <ul className="flex flex-col items-center gap-4 mt-4 sm:flex-row sm:gap-8 sm:mt-0">
             {linkArray.map((link, index) => (
               <li key={index}>
                 <NavLink
                   to={link.href}
-                  onClick={() => setMenuOpen(false)} // Close menu on mobile after click
+                  onClick={() => setMenuOpen(false)} // Au clique ferme le menu
                   className={({ isActive }) =>
                     isActive
                       ? "text-primary font-semibold text-more"

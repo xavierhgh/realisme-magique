@@ -11,7 +11,7 @@ function Home({titre, texte}) {
     <div>
       <Hero />
       {Jsonhome.map((item, index) => (
-        <Section key={index} img={item.img} titre={item.titre} texte={item.texte} />
+        <Section key={index} img={item.img} titre={item.titre} texte={item.texte} imageFirst={index % 2 === 0} />
       ))}
       <Concours />
       <Partenaire />
