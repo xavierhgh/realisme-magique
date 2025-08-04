@@ -13,13 +13,17 @@ function OeuvreDetail() {
   }
 
   return (
-    <div className="m-5 flex flex-col gap-8">
-        <Bouton label="Retour" onClick={() => window.history.back()} />
-      <Images img={oeuvre.img} alt={oeuvre.alt} />
-      <div className="flex flex-col items-center gap-4">
-        <h1 className="text-[2rem]">{oeuvre.title}</h1>
-        <h2 className="text-[1.5rem]">{oeuvre.by}</h2>
-        <p>{oeuvre.description}</p>
+    <div className="padding flex flex-col gap-8">
+      <Bouton label="Retour" onClick={() => window.history.back()} />
+      <div className="flex flex-col sm:flex-row-reverse items-center justify-center gap-8 sm:gap-24">
+        <div className="sm:w-1/3 w-full flex justify-center items-center">
+          <Images img={oeuvre.img} alt={oeuvre.alt} />
+        </div>
+        <div className="flex flex-col gap-4 w-full sm:items-center">
+          <h1 className="text-[2rem]">{oeuvre.title}</h1>
+          <h2 className="text-[1.5rem]">{oeuvre.by}</h2>
+          <p>{oeuvre.description}</p>
+        </div>
       </div>
     </div>
   );

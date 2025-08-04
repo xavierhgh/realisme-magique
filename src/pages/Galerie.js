@@ -49,8 +49,8 @@ function Galerie() {
   };
 
   return (
-    <div className="isotope-container m-5 flex flex-col gap-4">
-      <div className="filters flex flex-wrap gap-4 justify-between items-center mb-4 ">
+    <div className="padding isotope-container flex flex-col gap-4">
+      <div className="filters flex flex-wrap gap-4 justify-between sm:justify-start items-center mb-4 sm:pl-4">
         <Bouton label="Tout" onClick={() => handleFilterClick("*")} />
         <Bouton label="Peinture" onClick={() => handleFilterClick("Peinture")} />
         <Bouton
@@ -60,9 +60,9 @@ function Galerie() {
       <Bouton label="Photo" onClick={() => handleFilterClick("Photo")} />
       </div>
       <div ref={gridRef} className="grid">
-        <div className="grid-sizer flex flex-col gap-4">
+        <div className="grid-sizer">
           {Oeuvres.map((oeuvre) => (
-            <article key={oeuvre.id}>
+            <article key={oeuvre.id} className={`grid-item w-full sm:w-1/3 sm:p-4 ${oeuvre.category}`}>
               <Oeuvre {...oeuvre} onImageLoad={handleImageLoad} />
             </article>
           ))}
