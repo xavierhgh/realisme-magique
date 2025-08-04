@@ -8,7 +8,7 @@ import Contacts from "../data/Contacts";
 
 function Footer() {
   return (
-    <footer className="padding my-6 flex flex-col sm:flex-row sm:items-center gap-4 border-t border-accentuation">
+    <footer className="padding my-6 flex flex-col sm:flex-row  gap-4 border-t border-accentuation">
       <div className="sm:w-full">
       <img src={logoentier} alt="Logo de l'exposition" className="mx-auto w-2/3 my-4" />
       </div>
@@ -21,7 +21,7 @@ function Footer() {
         </ul>
       </div>
       <div className="flex flex-col items-center sm:w-full">
-        <h4>Heures d'ouverture</h4>
+        <h4>Ouverture</h4>
         <ul className="flex flex-col justify-center gap-2 my-4">
         {HeureOuverture.map((item, index) => (
             <Liste key={index} jour={item.Jour} heures={item.Heures} />
