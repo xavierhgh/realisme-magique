@@ -11,7 +11,7 @@ function Labeltexte({ label, id, placeholder, value, type, onChange, error, clas
             value={value}
             placeholder={placeholder}
             onChange={onChange}
-            className={`text-less border  w-full border-primary p-2 ${className}`}
+            className={`bg-blanc text-less border text-noir w-full border-primary p-2 ${className} focus:border-secondary focus:border-2 focus:outline-none`}
           />
           {error && (
             <p className='text-less a text-rouge font-bold'>{error}</p>
