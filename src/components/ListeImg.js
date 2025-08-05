@@ -14,7 +14,7 @@ function ListeImg({href, text, icon}) {
                 alt={`${text} Icon`}
                 className="inline-block w-6 h-6 mr-2"
               />
-              {text}
+              <span dangerouslySetInnerHTML={{ __html: text }} />
             </a>
           </li>
     );

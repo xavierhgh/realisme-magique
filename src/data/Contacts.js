@@ -15,8 +15,7 @@ const Contacts = [
   },
   {
     icon: PinIcon,
-    text: `Avenue Van Volxem 354,
-    1190 Bruxelles`,
+    text: `Avenue Van Volxem 354,<br/>1190 Bruxelles`,
     href: "https://www.google.com/maps?q=Avenue+Van+Volxem+354,+1190+Bruxelles"
   }
 ];

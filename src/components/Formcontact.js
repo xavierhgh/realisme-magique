@@ -29,13 +29,16 @@ function Formcontact() {
     if (Object.keys(validationErrors).length === 0) {
       setIsSubmitting(true);
       try {
-        const response = await fetch("https://renardpoint.be/send-mail-contact.php", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(formData),
-        });
+        const response = await fetch(
+          "https://renardpoint.be/send-mail-contact.php",
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(formData),
+          }
+        );
 
         if (response.ok) {
           setSubmitted(true);
@@ -87,25 +90,27 @@ function Formcontact() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="flex flex-col gap-4">
-      <Labeltexte
-        label="Nom"
-        id="nom"
-        placeholder="Doe"
-        value={formData.nom}
-        type="texte"
-        error={errors.nom}
-        onChange={handleChange}
-      />
-      <Labeltexte
-        label="Prénom"
-        id="prenom"
-        placeholder="John"
-        value={formData.prenom}
-        type="texte"
-        error={errors.prenom}
-        onChange={handleChange}
-      />
+    <form onSubmit={handleSubmit} className="flex flex-col gap-4 sm:w-full">
+      <div className="flex flex-row gap-4">
+        <Labeltexte
+          label="Prénom"
+          id="prenom"
+          placeholder="John"
+          value={formData.prenom}
+          type="texte"
+          error={errors.prenom}
+          onChange={handleChange}
+        />
+        <Labeltexte
+          label="Nom"
+          id="nom"
+          placeholder="Doe"
+          value={formData.nom}
+          type="texte"
+          error={errors.nom}
+          onChange={handleChange}
+        />
+      </div>
       <Labeltexte
         label="Email"
         id="email"

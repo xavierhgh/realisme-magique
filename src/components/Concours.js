@@ -106,21 +106,21 @@ function Concours() {
       <form className="flex flex-col gap-4 sm:w-1/2" onSubmit={handleSubmit}>
       <div className="flex flex-row gap-4">
         <Labeltexte
-          label="Nom"
-          id="name"
-          placeholder="Doe"
-          value={formData.name}
-          type="text"
-          error={errors.name}
-          onChange={handleChange}
-        />
-        <Labeltexte
           label="Prénom"
           id="firstname"
           placeholder="John"
           value={formData.firstname}
           type="text"
           error={errors.firstname}
+          onChange={handleChange}
+        />
+        <Labeltexte
+          label="Nom"
+          id="name"
+          placeholder="Doe"
+          value={formData.name}
+          type="text"
+          error={errors.name}
           onChange={handleChange}
         />
       </div>
