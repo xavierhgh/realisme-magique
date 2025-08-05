@@ -163,6 +163,79 @@ la Menstruación célèbrent le pouvoir du féminin et la connaissance instincti
 que El Poeta Trabaja et The People United Will Never Be Defeated (The Rally, detail)
 présentent des réflexions personnelles sur le coup d'État militaire de 1973 au Chili.`,
   },
+  {
+    id: 8,
+    img: require("../images/La Pensée Férale2.jpg"),
+    category: "Photo",
+    alt: "7 archival pigment prints on photo rag and texts",
+    title: "La Pensée Férale 2, 2020",
+    by: "Daniel Steegmann Mangrané & Juliana Fausto",
+    description:
+      `Daniel Steegmann Mangrané (né en 1977 en Espagne) propose dans son
+travail un déplacement de la perception : non pas en cherchant la nature dans
+l'humain, mais en reconnaissant l'humanité de tous les êtres. La Pensée Férale
+reflète l'intérêt constant de l'artiste pour la forêt tropicale brésilienne et les
+cosmologies spirituelles des peuples indigènes, qui ont comme racine commune
+l'animisme, croyance selon laquelle toutes les choses, y compris les plantes, les
+objets et les phénomènes naturels, possèdent une vie consciente ou un esprit.
+Développée en dialogue avec la philosophe brésilienne Juliana Fausto (née en 1979
+au Brésil), cette pièce s'inspire de son concept de la « pensée férale ». Contrairement
+à la notion de « pensée sauvage » de l'anthropologue français Claude Lévi-Strauss,
+la « pensée férale » n'est pas le vestige d'un passé pré-civilisé, mais un mode de
+pensée décolonisé, libéré des structures de la domestication occidentale.`,
+  },
+  {
+    id: 9,
+    img: require("../images/The People United Will Never Be Defeated.jpg"),
+    category: "Peinture",
+    alt: "Silkscreen on paper",
+    title: "The People United Will Never Be Defeated (The Rally, detail), 1977-2020",
+    by: "Cecilia Vicuña",
+    description:
+      `Cecilia Vicuña (née en 1948 au Chili) est une artiste, poète, cinéaste et
+activiste dont le travail résolument féministe établit un pont entre les savoirs
+indigènes et les questions environnementales et sociales contemporaines.
+NAUfraga, créée pour la 59e Biennale de Venise, réunit deux éléments centraux
+de la pratique de Vicuña : le quipu et le precario. Les quipus de Vicuña - faisant
+référence au mot quechua qui signifie « nœud » - réimaginent l'ancien système de
+codage andin qui enregistrait des informations en nouant des fils de couleur. Les
+precarios sont des sculptures éphémères, anti-monumentales, composées de
+matériaux trouvés et souvent installées de manière précaire. Les deux fonctionnent
+comme des poèmes dans l'espace, établissant un lien tactile entre le terrestre et le
+cosmique. Ces motifs se retrouvent également dans les peintures de l'artiste, là où
+elle insère des fils rouges et des symboles indigènes. Leoparda de ojitos et Ángel de
+la Menstruación célèbrent le pouvoir du féminin et la connaissance instinctive, tandis
+que El Poeta Trabaja et The People United Will Never Be Defeated (The Rally, detail)
+présentent des réflexions personnelles sur le coup d'État militaire de 1973 au Chili.`,
+  },
+  {
+    id: 10,
+    img: require("../images/The Recovered Image No. 1.jpg"),
+    category: "Sculpture",
+    alt: "Des formes qui définissent des animaux.",
+    title: "The Recovered Image No. 1, 2024",
+    by: "Annie Ratti",
+    description:
+      `Dans une pratique qui puise dans la recherche, Annie Ratti (née en 1956 en
+
+AIL
+
+Suisse) explore les vulnérabilités de l'expérience humaine et les incertitudes du
+savoir institutionnel dans les domaines de l'histoire, de l'écologie et de la science.
+Animal Memory est une réflexion poétique sur l'extinction, basée sur une archive
+méticuleusement compilée d'espèces disparues au cours du siècle dernier. Le
+projet comprend quatre grandes tapisseries en feutre de laine et quatre panneaux
+correspondants en noir et blanc servant de légendes, accompagnées d'un registre
+énumérant les espèces disparues, ainsi que les raisons, les lieux et les dates de
+leur disparition. Les tapisseries présentent des découpes créées en superposant
+les silhouettes positives et négatives de fragments d'animaux disparus. Annie Ratti
+réimagine la disparition en s'inspirant des Pathosformeln [formules du pathos] de
+l'historien de l'art allemand Aby Warburg. Selon lui, les images chargées d'émotion
+transmettent à travers les générations des significations culturelles qui se
+transforment au gré des époques. Cet ensemble de pièces devient un symbole de la
+crise écologique, suscitant une réflexion sur notre relation avec le monde naturel et
+la fragile persistance de la vie.`,
+  },
 ];
 
 export default Oeuvres;
