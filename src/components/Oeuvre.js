@@ -1,20 +1,69 @@
-import React from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
-function Oeuvre({id, img, alt, title, by, category, onImageLoad }) {
+function Oeuvre({ id, img, alt, title, by, category, onImageLoad }) {
+  // Recalcule la taille lors du resize de la fenêtre
+  useEffect(() => {
+    function updateSize() {
+      if (articleRef.current) {
+        const { width, height } = articleRef.current.getBoundingClientRect();
+        setWidth(width);
+        setHeight(height);
+      }
+    }
+    window.addEventListener("resize", updateSize);
+    updateSize();
+    return () => {
+      window.removeEventListener("resize", updateSize);
+    };
+  }, []);
+  const articleRef = useRef(null);
+  const [width, setWidth] = useState(200);
+  const [height, setHeight] = useState(200);
+  // Verifie si l'image est chargée
+  const handleImageLoad = (e) => {
+    if (onImageLoad) onImageLoad(e);
+    if (articleRef.current) {
+      // Récuperer la taille de l'article
+      const { width, height } = articleRef.current.getBoundingClientRect();
+      setWidth(width);
+      setHeight(height);
+    }
+  };
+
   return (
-    <Link to={`/oeuvre/${id}`} className={`relative`}>
-      <div className="bg-accentuation rounded-br-[10rem]">
-        {/* <div className="triangle inline-block absolute top-[100%] -translate-y-[100%] right-0 h-0 w-0 border-b-[8px] border-l-[200px] border-l-transparent triangle"></div> */}
-        <div className="p-2">
-          <img src={img} alt={alt} onLoad={onImageLoad} className="pb-0 w-full max-w-none" />
-          <div className="mt-0 bg-noirclair p-4">
-            <h3 className="mb-2">{title}</h3>
-            <h4>{by}</h4>
+    <article className={`grid-item w-full sm:w-1/3 p-4 ${category}`}>
+      <Link ref={articleRef} to={`/oeuvre/${id}`} className={`relative`}>
+        <div className="bg-accentuation rounded-br-[10rem]">
+          <div
+            className="triangle inline-block absolute top-[100%] -translate-y-[100%] right-0 h-0 w-0"
+            style={{
+              borderBottom: "12px solid #1D201F",
+              borderLeft: `${Math.round(width)}px solid transparent`,
+            }}
+          ></div>
+          <div
+            className="triangle inline-block absolute top-[100%] -translate-y-[100%] right-0 h-0 w-0"
+            style={{
+              borderBottom: `${Math.round(height)}px solid #1D201F`,
+              borderLeft: "12px solid transparent",
+            }}
+          ></div>
+          <div className="p-2 relative z-10">
+            <img
+              src={img}
+              alt={alt}
+              onLoad={handleImageLoad}
+              className="pb-0 w-full max-w-none"
+            />
+            <div className="mt-0 bg-noirclair p-4">
+              <h3 className="mb-2">{title}</h3>
+              <h4>{by}</h4>
+            </div>
           </div>
         </div>
-      </div>
-    </Link>
+      </Link>
+    </article>
   );
 }
 
