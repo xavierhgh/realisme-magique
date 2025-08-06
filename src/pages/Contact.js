@@ -1,13 +1,21 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import RS from "../data/RS";
 import ListeImg from "../components/ListeImg";
 import Contacts from "../data/Contacts";
 import Formcontact from "../components/Formcontact";
+import { scrollFromRight, scrollFromLeft } from "../utilitaire/gsapUtilitaire";
 
 function Contact() {
+    const refDroite = useRef(null);
+  const refGauche = useRef(null);
+
+  useEffect(() => {
+    scrollFromRight(refDroite);
+    scrollFromLeft(refGauche);
+  }, []);
   return (
     <div className="padding flex flex-col sm:flex-row sm:items-center gap-8">
-      <div className="p-6 bg-noirclair sm:w-full">
+      <div ref={refGauche} className="p-6 bg-noirclair sm:w-full">
         <div className="flex flex-col items-center">
           <h2>Réseaux sociaux</h2>
           <ul className="flex flex-col justify-center gap-2 my-4">
@@ -35,7 +43,7 @@ function Contact() {
           </ul>
         </div>
       </div>
-      <Formcontact />
+      <Formcontact useRef={refDroite} />
     </div>
   );
 }

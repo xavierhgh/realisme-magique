@@ -4,12 +4,10 @@
 @tailwind components;
 @tailwind utilities;
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  @apply m-0 p-0 box-border;
 }
 .container {
-  max-width: none;
+  @apply max-w-none overflow-x-hidden;
 }
 .grid-sizer {
   @apply w-full sm:w-1/3;

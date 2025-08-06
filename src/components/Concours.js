@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Labeltexte from "./Labeltexte";
+import { scrollFromRight, scrollFromLeft } from "../utilitaire/gsapUtilitaire";
 
 function Concours() {
   // aide avec une vidéo https://youtu.be/Ou-RUuujpXY https://youtu.be/c25pkDJ1xUI
@@ -13,6 +14,14 @@ function Concours() {
   const [errors, setErrors] = useState({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+
+  const refDroite = useRef(null);
+  const refGauche = useRef(null);
+
+  useEffect(() => {
+    scrollFromRight(refDroite);
+    scrollFromLeft(refGauche);
+  }, []);
 
   const handleChange = (e) => {
     setFormData({
@@ -91,7 +100,7 @@ function Concours() {
   }
   return (
     <div className="padding flex flex-col sm:flex-row gap-8">
-      <div className="flex flex-col gap-4 sm:w-1/2">
+      <div ref={refGauche} className="flex flex-col gap-4 sm:w-1/2">
         <h2 className="mt-6 mb-5">Concours</h2>
         <p>
           Vous rêvez de découvrir une exposition exceptionnelle sans dépenser un
@@ -104,7 +113,7 @@ function Concours() {
           Bonne chance !
         </p>
       </div>
-      <form className="flex flex-col gap-4 sm:w-1/2" onSubmit={handleSubmit}>
+      <form ref={refDroite} className="flex flex-col gap-4 sm:w-1/2" onSubmit={handleSubmit}>
         <div className="flex flex-row gap-4">
           <Labeltexte
             label="Prénom"

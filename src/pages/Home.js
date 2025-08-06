@@ -6,6 +6,7 @@ import Concours from "../components/Concours";
 import Partenaire from "../components/Partenaire";
 
 
+
 function Home({titre, texte}) {
   return (
     <div>

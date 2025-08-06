@@ -41,6 +41,19 @@ function Galerie() {
       }
     };
   }, []);
+
+  // Met à jour le layout Isotope lors du resize de la fenêtre
+  useEffect(() => {
+    if (!isotope) return;
+    const handleResize = () => {
+      isotope.layout();
+    };
+    window.addEventListener('resize', handleResize);
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, [isotope]);
+  
   const handleFilterClick = (filterValue) => {
     if (isotope) {
       filterValue = filterValue === "*" ? "*" : `.${filterValue}`;

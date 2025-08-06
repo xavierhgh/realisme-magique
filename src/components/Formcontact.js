@@ -2,7 +2,7 @@ import React from "react";
 import Labeltexte from "./Labeltexte";
 import { useState } from "react";
 
-function Formcontact() {
+function Formcontact({useRef}) {
   const [formData, setFormData] = useState({
     nom: "",
     prenom: "",
@@ -80,7 +80,7 @@ function Formcontact() {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="flex flex-col gap-4 sm:w-full">
+    <form ref={useRef} onSubmit={handleSubmit} className="flex flex-col gap-4 sm:w-full">
       <div className="flex flex-row gap-4">
         <Labeltexte
           label="Prénom"
