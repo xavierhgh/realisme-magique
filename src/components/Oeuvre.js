@@ -36,14 +36,14 @@ function Oeuvre({ id, img, alt, title, by, category, onImageLoad }) {
       <Link ref={articleRef} to={`/oeuvre/${id}`} className={`relative`}>
         <div className="bg-accentuation rounded-br-[10rem]">
           <div
-            className="triangle inline-block absolute top-[100%] -translate-y-[100%] right-0 h-0 w-0"
+            className="inline-block absolute top-[100%] -translate-y-[100%] right-0 h-0 w-0 z-[2]"
             style={{
               borderBottom: "12px solid #1D201F",
               borderLeft: `${Math.round(width)}px solid transparent`,
             }}
           ></div>
           <div
-            className="triangle inline-block absolute top-[100%] -translate-y-[100%] right-0 h-0 w-0"
+            className="inline-block absolute top-[100%] -translate-y-[100%] right-0 h-0 w-0 z-[2]"
             style={{
               borderBottom: `${Math.round(height)}px solid #1D201F`,
               borderLeft: "12px solid transparent",

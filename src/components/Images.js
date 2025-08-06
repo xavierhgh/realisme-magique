@@ -25,14 +25,14 @@ function Images({ img, alt, className }) {
     >
       <div className="bg-accentuation rounded-br-[10rem] h-auto flex items-center justify-center">
         <div
-          className="triangle inline-block absolute top-[100%] -translate-y-[100%] right-0 h-0 w-0"
+          className="inline-block absolute top-[100%] -translate-y-[100%] right-0 h-0 w-0 z-[2]"
           style={{
             borderBottom: "12px solid #1D201F",
             borderLeft: `${Math.round(dimensions.width)}px solid transparent`,
           }}
         ></div>
         <div
-          className="triangle inline-block absolute top-[100%] -translate-y-[100%] right-0 h-0 w-0"
+          className="inline-block absolute top-[100%] -translate-y-[100%] right-0 h-0 w-0 z-[2]"
           style={{
             borderBottom: `${Math.round(dimensions.height)}px solid #1D201F`,
             borderLeft: "12px solid transparent",

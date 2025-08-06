@@ -1,32 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
-.triangle {
-  display: inline-block;
-  position: absolute;
-  top: 100%;
-  transform: translateY(-100%);
-  right: 0%;
-  height: 0;
-  width: 0;
-  border-bottom: 8px solid red;
-  border-left: 500px solid transparent;
-  z-index: 2;
-  /* #1D201F */
-}
-
-/* src/index.css ou App.css */
-.spinner {
-  border: 8px solid #f3f3f3;
-  border-top: 8px solid #3498db;
-  border-radius: 50%;
-  width: 60px;
-  height: 60px;
-  animation: spin 1s linear infinite;
-}
-
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
 
 @tailwind base;
 @tailwind components;
