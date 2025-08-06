@@ -70,3 +70,6 @@ button,
 p, .text-less {
   @apply font-roboto text-[1rem];
 }
+.bouton {
+  @apply w-fit bg-primary px-6 py-4 border-blanc border text-noir font-bold hover:bg-secondary hover:text-blanc hover:shadow-primary hover:shadow-[0px_0px_10px_3px] transition-colors duration-300;
+}

@@ -100,30 +100,31 @@ function Concours() {
           une expérience inoubliable.
         </p>
         <p>
-          Pour participer, il vous suffit de remplir le formulaire ci-contre. Bonne chance ! 
+          Pour participer, il vous suffit de remplir le formulaire ci-contre.
+          Bonne chance !
         </p>
       </div>
       <form className="flex flex-col gap-4 sm:w-1/2" onSubmit={handleSubmit}>
-      <div className="flex flex-row gap-4">
-        <Labeltexte
-          label="Prénom"
-          id="firstname"
-          placeholder="John"
-          value={formData.firstname}
-          type="text"
-          error={errors.firstname}
-          onChange={handleChange}
-        />
-        <Labeltexte
-          label="Nom"
-          id="name"
-          placeholder="Doe"
-          value={formData.name}
-          type="text"
-          error={errors.name}
-          onChange={handleChange}
-        />
-      </div>
+        <div className="flex flex-row gap-4">
+          <Labeltexte
+            label="Prénom"
+            id="firstname"
+            placeholder="John"
+            value={formData.firstname}
+            type="text"
+            error={errors.firstname}
+            onChange={handleChange}
+          />
+          <Labeltexte
+            label="Nom"
+            id="name"
+            placeholder="Doe"
+            value={formData.name}
+            type="text"
+            error={errors.name}
+            onChange={handleChange}
+          />
+        </div>
         <Labeltexte
           label="Email"
           id="email"
@@ -143,13 +144,16 @@ function Concours() {
           onChange={handleChange}
         />
         <div className="my-4 flex flex-col items-center gap-4">
-          <button
-            className="bg-primary text-more p-4 hover:bg-accentuation transition-colors "
-            type="submit"
-            disabled={isSubmitting}
-          >
+          <button className="bouton " type="submit" disabled={isSubmitting}>
             Participer
           </button>
+          {submitted && (
+            <p className="text-less text-accentuation">
+              {" "}
+              Votre participation a été enregistrée avec succès ! Nous vous
+              contacterons par email si vous êtes le gagnant.
+            </p>
+          )}
           {isSubmitting && <p className="text-less">Envoi en cours...</p>}
           {errors.api && <p className="text-less text-rouge">{errors.api}</p>}
         </div>

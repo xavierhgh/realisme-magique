@@ -78,16 +78,6 @@ function Formcontact() {
     }
     return errors;
   };
-  if (submitted) {
-    return (
-      <div className="m-5">
-        <h2 className="mt-6 mb-9">Merci pour votre message !</h2>
-        <p className="text-more text-accentuation">
-          Nous vous répondrons dans les plus brefs délais.
-        </p>
-      </div>
-    );
-  }
 
   return (
     <form onSubmit={handleSubmit} className="flex flex-col gap-4 sm:w-full">
@@ -141,12 +131,15 @@ function Formcontact() {
       />
       <div className="my-4 flex flex-col items-center gap-4">
         <button
-          className="bg-primary text-more p-4 hover:bg-accentuation transition-colors "
+          className="bouton "
           type="submit"
           disabled={isSubmitting}
         >
           Envoyer
         </button>
+        {submitted && (
+          <p className="text-less text-accentuation"> Message envoyez avec succès !Nous vous contacterons dans les plus brefs délais.</p>
+        )}
         {isSubmitting && <p className="text-less">Envoi en cours...</p>}
         {errors.api && <p className="text-less text-rouge">{errors.api}</p>}
       </div>

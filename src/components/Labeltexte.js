@@ -11,7 +11,7 @@ function Labeltexte({ label, id, placeholder, value, type, onChange, error, clas
               value={value}
               placeholder={placeholder}
               onChange={onChange}
-              className={`bg-blanc text-less border text-noir w-full border-primary p-2 min-h-[8rem] text-left align-top ${className} focus:border-secondary focus:outline-none`}
+              className={`bg-noir text-less border text-blanc w-full border-blanc p-2 min-h-[8rem] text-left align-top ${className} focus:border-primary focus:outline-none`}
             />
           ) : (
             <input
@@ -22,7 +22,7 @@ function Labeltexte({ label, id, placeholder, value, type, onChange, error, clas
               value={value}
               placeholder={placeholder}
               onChange={onChange}
-              className={`bg-blanc text-less border text-noir w-full border-primary p-2 ${className} focus:border-secondary focus:outline-none`}
+              className={`bg-noir text-less border text-blanc w-full border-blanc p-2 ${className} focus:border-primary focus:outline-none`}
             />
           )}
           {error && (

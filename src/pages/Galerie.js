@@ -62,7 +62,7 @@ function Galerie() {
       <div ref={gridRef} className="grid">
         <div className="grid-sizer">
           {Oeuvres.map((oeuvre) => (
-            <article key={oeuvre.id} className={`grid-item w-full sm:w-1/3 sm:p-4 ${oeuvre.category}`}>
+            <article key={oeuvre.id} className={`grid-item w-full sm:w-1/3 p-4 ${oeuvre.category}`}>
               <Oeuvre {...oeuvre} onImageLoad={handleImageLoad} />
             </article>
           ))}
