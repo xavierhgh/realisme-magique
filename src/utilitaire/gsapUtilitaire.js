@@ -13,10 +13,9 @@ export function scrollFromRight(ref) {
       duration: 1,
       scrollTrigger: {
         trigger: ref.current,
-        start: "top 80%",
+        start: "top 75%",
         end: "top 30%",
         toggleActions: "play none none reverse",
-        markers: true,
       },
     }
   );
@@ -32,10 +31,9 @@ export function scrollFromLeft(ref) {
       duration: 1,
       scrollTrigger: {
         trigger: ref.current,
-        start: "top 80%",
+        start: "top 75%",
         end: "top 30%",
         toggleActions: "play none none reverse",
-        markers: true,
       },
     }
   );
