@@ -4,15 +4,15 @@ const partenaires = [
     alt: 'Fédération Wallonie-Bruxelles',
   },
   {
-    src: require('../images/logo-fwb-negatif-vertical.png'),
-    alt: 'Partenaire 2',
+    src: require('../images/duvel_logo.png'),
+    alt: 'Duvel',
   },
   {
-    src: require('../images/logo-fwb-negatif-vertical.png'),
-    alt: 'Partenaire 3',
+    src: require('../images/loterie_nationale_logo.png'),
+    alt: 'Loterie Nationale',
   },
   {
-    src: require('../images/logo-fwb-negatif-vertical.png'),
+    src: require('../images/la_libre_belgique_logo.png'),
     alt: 'Partenaire 4',
   },
 ];
