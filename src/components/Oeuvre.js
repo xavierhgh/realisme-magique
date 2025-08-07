@@ -32,8 +32,8 @@ function Oeuvre({ id, img, alt, title, by, category, onImageLoad }) {
   };
 
   return (
-    <article className={`grid-item w-full sm:w-1/3 p-4 ${category}`}>
-      <Link ref={articleRef} to={`/oeuvre/${id}`} className={`relative`}>
+    <article className={`grid-item w-full sm:w-1/3 p-6 ${category} hover:transform hover:scale-[103%] transition-transform duration-300`} ref={articleRef}>
+      <Link to={`/oeuvre/${id}`} className={`relative`}>
         <div className="bg-accentuation rounded-br-[10rem]">
           <div
             className="inline-block absolute top-[100%] -translate-y-[100%] right-0 h-0 w-0 z-[2]"
@@ -49,7 +49,7 @@ function Oeuvre({ id, img, alt, title, by, category, onImageLoad }) {
               borderLeft: "12px solid transparent",
             }}
           ></div>
-          <div className="p-2 relative z-10">
+          <div className="p-2 relative z-10 box-shadow-primary">
             <img
               src={img}
               alt={alt}

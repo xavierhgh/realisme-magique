@@ -19,7 +19,12 @@ module.exports = {
       flower: ['flowerpower'],
       roboto: ['Roboto', 'sans-serif'],
     },
-    extend: {},
+    extend: {
+      dropShadow: {
+        'primary': '-6px -10px 10px rgba(244, 241, 236, 0.2)',
+        'shadowhover': '-6px -10px 10px rgba(101, 189, 71, 0.4)',
+      },
+    },
   },
   plugins: [],
 }
