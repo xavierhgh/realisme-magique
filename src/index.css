@@ -3,7 +3,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-* {
+*,
+*::before,
+*::after {
   @apply m-0 p-0 box-border;
 }
 .container {
@@ -59,4 +61,24 @@ p, .text-less {
 }
 .bouton {
   @apply w-fit bg-primary px-6 py-4 border-blanc border text-noir font-bold hover:bg-secondary hover:text-blanc hover:shadow-primary hover:shadow-[0px_0px_10px_3px] transition-colors duration-300;
+}
+
+.hover-effect {
+  @apply relative font-semibold hover:text-primary;
+}
+
+.hover-effect::before {
+  @apply content-[''] absolute bottom-0 left-1/2 -translate-x-1/2 transform scale-0 transition-transform duration-500 ease-in-out w-full h-[2px] bg-primary;
+}
+
+.hover-effect:hover::before {
+  @apply  -translate-x-1/2 transform scale-100;
+}
+
+.active-link {
+  @apply text-primary font-semibold text-more hover-effect;
+}
+
+.active-link::before {
+  @apply content-[''] absolute bottom-0 left-1/2 -translate-x-1/2 transform scale-100 transition-transform duration-500 ease-in-out w-full h-[2px] bg-primary;
 }

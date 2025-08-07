@@ -11,6 +11,9 @@ function Header() {
     { href: "/contact", text: "Contact" },
   ];
 
+  // 1 = lundi
+  const isMonday = new Date().getDay() === 1;
+
   return (
     <header className="padding border-b border-accentuation sm:flex justify-between items-center">
       <div className="flex items-center justify-between">
@@ -23,7 +26,7 @@ function Header() {
           />
 
           <p className="text-more">
-            Ouvert Aujourd'hui
+            {isMonday ? "Fermé aujourd'hui" : "Ouvert aujourd'hui"}
           </p>
         </div>
         {/* Burger menu visible que sur mobile */}
@@ -48,8 +51,8 @@ function Header() {
                   onClick={() => setMenuOpen(false)} // Au clique ferme le menu
                   className={({ isActive }) =>
                     isActive
-                      ? "text-primary font-semibold text-more"
-                      : "hover:text-accentuation transition-colors text-more"
+                      ? "active-link"
+                      : "hover-effect"
                   }
                 >
                   {link.text}

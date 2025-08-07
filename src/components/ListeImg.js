@@ -2,7 +2,7 @@ import React from 'react';
 
 function ListeImg({href, text, icon}) {
     return (
-          <li className='w-full font-roboto text-[1.125rem]'>
+          <li className='w-full font-roboto text-[1.125rem] hover-effect'>
             <a
               href={href}
               target="_blank"
