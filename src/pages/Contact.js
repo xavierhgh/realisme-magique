@@ -14,8 +14,8 @@ function Contact() {
     scrollFromLeft(refGauche);
   }, []);
   return (
-    <div className="padding flex flex-col sm:flex-row sm:items-center gap-8">
-      <div ref={refGauche} className="p-6 bg-noirclair sm:w-full">
+    <div className="padding flex flex-col md:flex-row md:items-center gap-8">
+      <div ref={refGauche} className="p-6 bg-noirclair md:w-full drop-shadow-middleblanc">
         <div className="flex flex-col items-center">
           <h2>Réseaux sociaux</h2>
           <ul className="flex flex-col justify-center gap-2 my-4">

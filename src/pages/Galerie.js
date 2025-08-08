@@ -8,9 +8,11 @@ import Bouton from "../components/Bouton";
 function Galerie() {
   const [isotope, setIsotope] = useState(null);
   const gridRef = useRef(null);
-  // State to track image loading
   const [imagesLoaded, setImagesLoaded] = useState(0);
   const totalImages = Oeuvres.length;
+
+  // Ajout du filtre actif
+  const [activeFilter, setActiveFilter] = useState("*");
 
   const handleImageLoad = () => {
     setImagesLoaded((count) => count + 1);
@@ -54,26 +56,38 @@ function Galerie() {
     };
   }, [isotope]);
 
+  // Mets à jour le filtre actif
   const handleFilterClick = (filterValue) => {
+    setActiveFilter(filterValue);
     if (isotope) {
-      filterValue = filterValue === "*" ? "*" : `.${filterValue}`;
-      isotope.arrange({ filter: filterValue });
+      const filter = filterValue === "*" ? "*" : `.${filterValue}`;
+      isotope.arrange({ filter });
     }
   };
 
   return (
     <div className="padding isotope-container flex flex-col gap-4">
-      <div className="filters flex flex-wrap gap-4 justify-between sm:justify-start items-center mb-4 sm:pl-4">
-        <Bouton label="Tout" onClick={() => handleFilterClick("*")} />
+      <div className="filters flex flex-wrap gap-4 justify-between md:justify-start items-center mb-4 md:pl-4">
+        <Bouton
+          label="Tout"
+          onClick={() => handleFilterClick("*")}
+          active={activeFilter === "*"}
+        />
         <Bouton
           label="Peinture"
           onClick={() => handleFilterClick("Peinture")}
+          active={activeFilter === "Peinture"}
         />
         <Bouton
           label="Sculpture"
           onClick={() => handleFilterClick("Sculpture")}
+          active={activeFilter === "Sculpture"}
         />
-        <Bouton label="Photo" onClick={() => handleFilterClick("Photo")} />
+        <Bouton
+          label="Photo"
+          onClick={() => handleFilterClick("Photo")}
+          active={activeFilter === "Photo"}
+        />
       </div>
       <div ref={gridRef} className="grid">
         <div className="grid-sizer"></div>

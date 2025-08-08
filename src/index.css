@@ -12,7 +12,7 @@
   @apply max-w-none overflow-hidden;
 }
 .grid-sizer {
-  @apply w-full sm:w-1/3;
+  @apply w-full md:w-1/2 lg:w-1/3;
 }
 html {
   font-size: 16px;
@@ -59,9 +59,6 @@ button,
 p, .text-less {
   @apply font-roboto text-[1rem];
 }
-.bouton {
-  @apply w-fit bg-primary px-6 py-4 border-blanc border text-noir font-bold hover:bg-secondary hover:text-blanc hover:shadow-primary hover:shadow-[0px_0px_10px_3px] transition-colors duration-300;
-}
 
 .hover-effect {
   @apply relative font-semibold hover:text-primary;
@@ -87,12 +84,23 @@ p, .text-less {
   @apply drop-shadow-primary hover:drop-shadow-shadowhover;
 }
 
-/* Ajoute dans ton CSS global */
-.isotope-updating {
-  opacity: 0;
-  transition: opacity 0.2s;
+/* Lien de l'inspiration https://codepen.io/rauldronca/pen/mEXomp */
+
+.btn {
+  @apply relative overflow-hidden transition-all duration-500 px-6 py-2;
 }
-.is-visible {
-  opacity: 1;
-  transition: opacity 0.2s;
+.btn > .before-effect {
+  @apply absolute inset-0 bg-blanc transition-all duration-300 z-10;
+}
+.btn:hover > .before-effect {
+  @apply opacity-0 scale-50;
+}
+.btn > .after-effect {
+  @apply absolute inset-0 border border-blanc opacity-0 scale-125 transition-all duration-300 z-10;
+}
+.btn:hover > .after-effect {
+  @apply opacity-100 scale-100;
+}
+.btn > .btn-text {
+  @apply relative z-20;
 }

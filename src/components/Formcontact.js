@@ -134,8 +134,16 @@ function Formcontact({ useRef }) {
         className="h-32"
       />
       <div className="my-4 flex flex-col items-center gap-4">
-        <button className="bouton " type="submit" disabled={isSubmitting}>
-          Envoyer
+        <button
+          type="submit"
+          disabled={isSubmitting}
+          className={`btn text-noir hover:text-blanc ${
+            isSubmitting ? "opacity-50 cursor-not-allowed" : ""
+          } ${submitted ? "ring-2 ring-primary text-primary" : ""}`}
+        >
+          <span className="before-effect"></span>
+          <span className="after-effect"></span>
+          <span className="btn-text">Participer</span>
         </button>
 
         {isSubmitting && <p className="text-less">Envoi en cours...</p>}

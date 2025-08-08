@@ -92,8 +92,8 @@ function Concours() {
   };
   return (
     <div className="padding">
-      <div className="bg-noirclair border border-accentuation p-4 flex flex-col sm:flex-row gap-8 shadow-2xl drop-shadow-middle">
-        <div ref={refGauche} className="flex flex-col gap-4 sm:w-1/2">
+      <div className="bg-noirclair border border-accentuation p-4 flex flex-col md:flex-row gap-8 shadow-2xl drop-shadow-middle">
+        <div ref={refGauche} className="flex flex-col gap-4 md:w-1/2">
           <h2 className="mt-6 mb-5">Concours</h2>
           <p>
             Vous rêvez de découvrir une exposition exceptionnelle sans dépenser
@@ -108,7 +108,7 @@ function Concours() {
         </div>
         <form
           ref={refDroite}
-          className="flex flex-col gap-4 sm:w-1/2"
+          className="flex flex-col gap-4 md:w-1/2"
           onSubmit={handleSubmit}
         >
           <div className="flex flex-row gap-4">
@@ -150,8 +150,16 @@ function Concours() {
             onChange={handleChange}
           />
           <div className="my-4 flex flex-col items-center gap-4">
-            <button className="bouton " type="submit" disabled={isSubmitting}>
-              Participer
+            <button
+              type="submit"
+              disabled={isSubmitting}
+              className={`btn text-noir hover:text-blanc ${
+                isSubmitting ? "opacity-50 cursor-not-allowed" : ""
+              } ${submitted ? "ring-2 ring-primary text-primary" : ""}`}
+            >
+              <span className="before-effect"></span>
+              <span className="after-effect"></span>
+              <span className="btn-text">Participer</span>
             </button>
             {isSubmitting && <p className="text-less">Envoi en cours...</p>}
             {errors.api && <p className="text-less text-rouge">{errors.api}</p>}

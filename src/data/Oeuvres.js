@@ -28,8 +28,7 @@ const Oeuvres = [
     alt: "Description of your image",
     title: "Family (Extended), 2023",
     by: "Jumana Manna",
-    description:
-      `La pratique de Jumana Manna (née en 1987 aux États-Unis) explore la manière
+    description: `La pratique de Jumana Manna (née en 1987 aux États-Unis) explore la manière
 dont le pouvoir s'articule, en se concentrant sur le corps, la terre et la matérialité en
 lien avec les héritages coloniaux et les histoires de lieux.
 La Cache Series s'inspire de la khabya, une structure autrefois courante pour
@@ -43,7 +42,7 @@ stockage des banques de semences, les réserves des musées, les institutions
 ethnographiques et les infrastructures urbaines. Jumana Manna fusionne des
 conceptions contrastées de l'archivage : de la graine qui stocke le matériel génétique
 permettant la survie, aux khabya utilisés pour la subsistance, et à l'institution dont la
-mission de conservation se lie à des pratiques d'accumulation.`
+mission de conservation se lie à des pratiques d'accumulation.`,
   },
   {
     id: 3,
@@ -52,8 +51,7 @@ mission de conservation se lie à des pratiques d'accumulation.`
     alt: "Lavered composites of organic, inorganic, human and machine-made matter.",
     title: "The End of Imagination II, 2022",
     by: "Adrián Villar Rojas",
-    description:
-      `Adrian Villar Rojas (ne en 1980 en Argentine) construit des mondes spéculatifs
+    description: `Adrian Villar Rojas (ne en 1980 en Argentine) construit des mondes spéculatifs
 qui se déploient à travers l'utilisation croisée de la sculpture, du dessin, de la vidéo,
 de la littérature et de systèmes de fabrication performatifs. Au cœur de sa pratique
 se trouve Time Engine. Ce modèle informatique, que l'artiste a développé avec son
@@ -80,8 +78,7 @@ de l'humain; elle devient distribuée, recombinante et planétaire.`,
     alt: "Series of 5 silver gelatin prints",
     title: "Rhombus, 1974 (reprinted 2022)",
     by: "Barbara Leisgen and Michael Leisgen",
-    description:
-      `Barbara Leisgen (1940-2017, Allemagne) et Michael Leisgen (né en 1944
+    description: `Barbara Leisgen (1940-2017, Allemagne) et Michael Leisgen (né en 1944
 en Allemagne) ont formé un duo d'artistes au début des années 1960, travaillant
 à la croisée de la photographie, de la performance et du Land Art afin de penser
 la relation entre le corps et la nature. Bien qu'ancrée dans l'art conceptuel,
@@ -105,8 +102,7 @@ le pouvoir qui lui est attribué dans de nombreuses mythologies et cosmologies.`
     alt: "Ribbed glass, structural colours",
     title: "04.10.24 #3, 2024",
     by: "Ann Veronica Janssens",
-    description:
-      `Depuis les années 1980, l'artiste belge Ann Veronica Janssens (née en 1956
+    description: `Depuis les années 1980, l'artiste belge Ann Veronica Janssens (née en 1956
 au Royaume-Uni) développe une pratique tournée vers la science, expérimentant
 la lumière et l'espace. Ses objets minimalistes et ses environnements immersifs
 matérialisent ou déstabilisent l'illusion optique du monde tel que nous le
@@ -125,8 +121,7 @@ irisées, comme celles des plumes de paon ou des ailes de papillon.`,
     alt: "7 archival pigment prints on photo rag and texts",
     title: "La Pensée Férale, 2020",
     by: "Daniel Steegmann Mangrané & Juliana Fausto",
-    description:
-      `Daniel Steegmann Mangrané (né en 1977 en Espagne) propose dans son
+    description: `Daniel Steegmann Mangrané (né en 1977 en Espagne) propose dans son
 travail un déplacement de la perception : non pas en cherchant la nature dans
 l'humain, mais en reconnaissant l'humanité de tous les êtres. La Pensée Férale
 reflète l'intérêt constant de l'artiste pour la forêt tropicale brésilienne et les
@@ -146,8 +141,7 @@ pensée décolonisé, libéré des structures de la domestication occidentale.`,
     alt: "Manual silkscreen print on 285g Rosapina paper from Casa Fabriano",
     title: "Leoparda de ojitos, 1977",
     by: "Cecilia Vicuña",
-    description:
-      `Cecilia Vicuña (née en 1948 au Chili) est une artiste, poète, cinéaste et
+    description: `Cecilia Vicuña (née en 1948 au Chili) est une artiste, poète, cinéaste et
 activiste dont le travail résolument féministe établit un pont entre les savoirs
 indigènes et les questions environnementales et sociales contemporaines.
 NAUfraga, créée pour la 59e Biennale de Venise, réunit deux éléments centraux
@@ -170,8 +164,7 @@ présentent des réflexions personnelles sur le coup d'État militaire de 1973 a
     alt: "7 archival pigment prints on photo rag and texts",
     title: "La Pensée Férale 2, 2020",
     by: "Daniel Steegmann Mangrané & Juliana Fausto",
-    description:
-      `Daniel Steegmann Mangrané (né en 1977 en Espagne) propose dans son
+    description: `Daniel Steegmann Mangrané (né en 1977 en Espagne) propose dans son
 travail un déplacement de la perception : non pas en cherchant la nature dans
 l'humain, mais en reconnaissant l'humanité de tous les êtres. La Pensée Férale
 reflète l'intérêt constant de l'artiste pour la forêt tropicale brésilienne et les
@@ -189,10 +182,10 @@ pensée décolonisé, libéré des structures de la domestication occidentale.`,
     img: require("../images/the_people_united_will_never_be_defeated.jpg"),
     category: "Peinture",
     alt: "Silkscreen on paper",
-    title: "The People United Will Never Be Defeated (The Rally, detail), 1977-2020",
+    title:
+      "The People United Will Never Be Defeated (The Rally, detail), 1977-2020",
     by: "Cecilia Vicuña",
-    description:
-      `Cecilia Vicuña (née en 1948 au Chili) est une artiste, poète, cinéaste et
+    description: `Cecilia Vicuña (née en 1948 au Chili) est une artiste, poète, cinéaste et
 activiste dont le travail résolument féministe établit un pont entre les savoirs
 indigènes et les questions environnementales et sociales contemporaines.
 NAUfraga, créée pour la 59e Biennale de Venise, réunit deux éléments centraux
@@ -215,26 +208,32 @@ présentent des réflexions personnelles sur le coup d'État militaire de 1973 a
     alt: "Des formes qui définissent des animaux.",
     title: "The Recovered Image No. 1, 2024",
     by: "Annie Ratti",
-    description:
-      `Dans une pratique qui puise dans la recherche, Annie Ratti (née en 1956 en
-
-AIL
-
-Suisse) explore les vulnérabilités de l'expérience humaine et les incertitudes du
-savoir institutionnel dans les domaines de l'histoire, de l'écologie et de la science.
-Animal Memory est une réflexion poétique sur l'extinction, basée sur une archive
-méticuleusement compilée d'espèces disparues au cours du siècle dernier. Le
-projet comprend quatre grandes tapisseries en feutre de laine et quatre panneaux
-correspondants en noir et blanc servant de légendes, accompagnées d'un registre
-énumérant les espèces disparues, ainsi que les raisons, les lieux et les dates de
-leur disparition. Les tapisseries présentent des découpes créées en superposant
-les silhouettes positives et négatives de fragments d'animaux disparus. Annie Ratti
-réimagine la disparition en s'inspirant des Pathosformeln [formules du pathos] de
-l'historien de l'art allemand Aby Warburg. Selon lui, les images chargées d'émotion
-transmettent à travers les générations des significations culturelles qui se
-transforment au gré des époques. Cet ensemble de pièces devient un symbole de la
-crise écologique, suscitant une réflexion sur notre relation avec le monde naturel et
-la fragile persistance de la vie.`,
+    description: `Dans une pratique qui puise dans la recherche, Annie Ratti (née en 1956 en Suisse) explore les vulnérabilités de l'expérience humaine et les incertitudes du savoir institutionnel dans les domaines de l'histoire, de l'écologie et de la science.Animal Memory est une réflexion poétique sur l'extinction, basée sur une archive méticuleusement compilée d'espèces disparues au cours du siècle dernier. Le projet comprend quatre grandes tapisseries en feutre de laine et quatre panneaux correspondants en noir et blanc servant de légendes, accompagnées d'un registre énumérant les espèces disparues, ainsi que les raisons, les lieux et les dates deleur disparition. Les tapisseries présentent des découpes créées en superposantles silhouettes positives et négatives de fragments d'animaux disparus. Annie Rattiréimagine la disparition en s'inspirant des Pathosformeln [formules du pathos] del'historien de l'art allemand Aby Warburg. Selon lui, les images chargées d'émotiontransmettent à travers les générations des significations culturelles qui setransforment au gré des époques. Cet ensemble de pièces devient un symbole de lacrise écologique, suscitant une réflexion sur notre relation avec le monde naturel etla fragile persistance de la vie.`,
+  },
+  {
+    id: 11,
+    img: require("../images/tuban.jpg"),
+    category: "Sculpture",
+    alt: "Une cuisine avec des expériences.",
+    title: "Tuban, 2019-ongoing",
+    by: "Ade Darmawan",
+    description: `Ade Darmawan (né en 1974 en Indonésie) est artiste, commissaire d'exposition
+et cofondateur de ruangrupa. Il travaille principalement avec des matériaux quotidiens
+et historiques, retraçant leur circulation, leur extraction et l'évolution de leurs signi-
+fications.
+Son installation Tuban emprunte son titre au nom de la ville indonésienne du roman
+Arus Balik (1995) de Pramoedya Ananta Toer, qui retrace la culture maritime au
+moment des premières incursions coloniales en Indonésie. À l'occasion de l'exposition
+à WIELS, le monde du roman a été réimaginé dans un langage visuel évocateur des
+années 1950-1960, une période charnière de transformation géopolitique et idéologi-
+que, marquée par l'émergence des nations postcoloniales. Le mobilier et les matériaux
+utilisés révèlent l'enchevêtrement profond du design moderniste avec les héritages
+coloniaux et les logiques d'extraction. Des gouttes tombent de kits de distillation sur
+des autobiographies de l'ex-président indonésién Soeharto. Celles-ci s'imprègnent
+ainsi d'huiles essentielles extraites d'épices et de feuilles mentionnées dans Arus Balik,
+établissant un lien entre les connaissances botaniques, les routes commerciales
+impériales, le contrôle des ressources et le pouvoir étatique. Le parfum produit par la
+distillation persiste dans l'air, comme s'il était la seule trace de ce passé maritime.`,
   },
 ];
 
