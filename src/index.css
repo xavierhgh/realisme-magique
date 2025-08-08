@@ -9,7 +9,7 @@
   @apply m-0 p-0 box-border;
 }
 .container {
-  @apply max-w-none overflow-x-hidden;
+  @apply max-w-none overflow-hidden;
 }
 .grid-sizer {
   @apply w-full sm:w-1/3;
@@ -85,4 +85,14 @@ p, .text-less {
 
 .box-shadow-primary {
   @apply drop-shadow-primary hover:drop-shadow-shadowhover;
+}
+
+/* Ajoute dans ton CSS global */
+.isotope-updating {
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+.is-visible {
+  opacity: 1;
+  transition: opacity 0.2s;
 }

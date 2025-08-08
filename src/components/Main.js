@@ -9,7 +9,7 @@ import OeuvreDetail from "../pages/OeuvreDetail";
 
 function Main() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/realisme-magique">
       <Header />
       <div className="container">
         <Routes>

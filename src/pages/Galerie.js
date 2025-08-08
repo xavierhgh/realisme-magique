@@ -17,10 +17,10 @@ function Galerie() {
   };
 
   useEffect(() => {
-  if (isotope && imagesLoaded === totalImages) {
-    isotope.layout();
-  }
-}, [imagesLoaded, isotope, totalImages]);
+    if (isotope && imagesLoaded === totalImages) {
+      isotope.layout();
+    }
+  }, [imagesLoaded, isotope, totalImages]);
 
   // Initialisation d'Isotope
   useEffect(() => {
@@ -48,12 +48,12 @@ function Galerie() {
     const handleResize = () => {
       isotope.layout();
     };
-    window.addEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
     return () => {
-      window.removeEventListener('resize', handleResize);
+      window.removeEventListener("resize", handleResize);
     };
   }, [isotope]);
-  
+
   const handleFilterClick = (filterValue) => {
     if (isotope) {
       filterValue = filterValue === "*" ? "*" : `.${filterValue}`;
@@ -65,19 +65,21 @@ function Galerie() {
     <div className="padding isotope-container flex flex-col gap-4">
       <div className="filters flex flex-wrap gap-4 justify-between sm:justify-start items-center mb-4 sm:pl-4">
         <Bouton label="Tout" onClick={() => handleFilterClick("*")} />
-        <Bouton label="Peinture" onClick={() => handleFilterClick("Peinture")} />
+        <Bouton
+          label="Peinture"
+          onClick={() => handleFilterClick("Peinture")}
+        />
         <Bouton
           label="Sculpture"
           onClick={() => handleFilterClick("Sculpture")}
-      />
-      <Bouton label="Photo" onClick={() => handleFilterClick("Photo")} />
+        />
+        <Bouton label="Photo" onClick={() => handleFilterClick("Photo")} />
       </div>
       <div ref={gridRef} className="grid">
-        <div className="grid-sizer">
-          {Oeuvres.map((oeuvre) => (
-              <Oeuvre key={oeuvre.id} {...oeuvre} onImageLoad={handleImageLoad} />
-          ))}
-        </div>
+        <div className="grid-sizer"></div>
+        {Oeuvres.map((oeuvre) => (
+          <Oeuvre key={oeuvre.id} {...oeuvre} onImageLoad={handleImageLoad} />
+        ))}
       </div>
     </div>
   );

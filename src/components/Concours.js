@@ -37,13 +37,16 @@ function Concours() {
     if (Object.keys(validationErrors).length === 0) {
       setIsSubmitting(true);
       try {
-        const response = await fetch("https://renardpoint.be/send-mail.php", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(formData),
-        });
+        const response = await fetch(
+          "https://xavier.techniques-graphiques.be/realisme-magique/send-mail.php",
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(formData),
+          }
+        );
 
         if (response.ok) {
           setSubmitted(true);
@@ -87,87 +90,79 @@ function Concours() {
 
     return errors;
   };
-  if (submitted) {
-    return (
-      <div className="m-5">
-        <h2 className="mt-6 mb-9">Concours</h2>
-        <p className="text-more text-accentuation">
-          Merci d'avoir participé au concours ! Vous recevrez un mail si vous
-          avez gagné.
-        </p>
-      </div>
-    );
-  }
   return (
     <div className="padding">
       <div className="bg-noirclair border border-accentuation p-4 flex flex-col sm:flex-row gap-8 shadow-2xl drop-shadow-middle">
-      <div ref={refGauche} className="flex flex-col gap-4 sm:w-1/2">
-        <h2 className="mt-6 mb-5">Concours</h2>
-        <p>
-          Vous rêvez de découvrir une exposition exceptionnelle sans dépenser un
-          centime ? C’est le moment de tenter votre chance ! Participez dès
-          maintenant à notre concours et remportez une place gratuite pour vivre
-          une expérience inoubliable.
-        </p>
-        <p>
-          Pour participer, il vous suffit de remplir le formulaire ci-contre.
-          Bonne chance !
-        </p>
-      </div>
-      <form ref={refDroite} className="flex flex-col gap-4 sm:w-1/2" onSubmit={handleSubmit}>
-        <div className="flex flex-row gap-4">
+        <div ref={refGauche} className="flex flex-col gap-4 sm:w-1/2">
+          <h2 className="mt-6 mb-5">Concours</h2>
+          <p>
+            Vous rêvez de découvrir une exposition exceptionnelle sans dépenser
+            un centime ? C’est le moment de tenter votre chance ! Participez dès
+            maintenant à notre concours et remportez une place gratuite pour
+            vivre une expérience inoubliable.
+          </p>
+          <p>
+            Pour participer, il vous suffit de remplir le formulaire ci-contre.
+            Bonne chance !
+          </p>
+        </div>
+        <form
+          ref={refDroite}
+          className="flex flex-col gap-4 sm:w-1/2"
+          onSubmit={handleSubmit}
+        >
+          <div className="flex flex-row gap-4">
+            <Labeltexte
+              label="Prénom"
+              id="firstname"
+              placeholder="John"
+              value={formData.firstname}
+              type="text"
+              error={errors.firstname}
+              onChange={handleChange}
+            />
+            <Labeltexte
+              label="Nom"
+              id="name"
+              placeholder="Doe"
+              value={formData.name}
+              type="text"
+              error={errors.name}
+              onChange={handleChange}
+            />
+          </div>
           <Labeltexte
-            label="Prénom"
-            id="firstname"
-            placeholder="John"
-            value={formData.firstname}
+            label="Email"
+            id="email"
+            placeholder="john.doe@example.com"
+            value={formData.email}
             type="text"
-            error={errors.firstname}
+            error={errors.email}
             onChange={handleChange}
           />
           <Labeltexte
-            label="Nom"
-            id="name"
-            placeholder="Doe"
-            value={formData.name}
+            label="Confirmation Email"
+            id="confirm_email"
+            placeholder="john.doe@example.com"
+            value={formData.confirm_email}
             type="text"
-            error={errors.name}
+            error={errors.confirm_email}
             onChange={handleChange}
           />
-        </div>
-        <Labeltexte
-          label="Email"
-          id="email"
-          placeholder="john.doe@example.com"
-          value={formData.email}
-          type="text"
-          error={errors.email}
-          onChange={handleChange}
-        />
-        <Labeltexte
-          label="Confirmation Email"
-          id="confirm_email"
-          placeholder="john.doe@example.com"
-          value={formData.confirm_email}
-          type="text"
-          error={errors.confirm_email}
-          onChange={handleChange}
-        />
-        <div className="my-4 flex flex-col items-center gap-4">
-          <button className="bouton " type="submit" disabled={isSubmitting}>
-            Participer
-          </button>
-          {submitted && (
-            <p className="text-less text-accentuation">
-              {" "}
-              Votre participation a été enregistrée avec succès ! Nous vous
-              contacterons par email si vous êtes le gagnant.
-            </p>
-          )}
-          {isSubmitting && <p className="text-less">Envoi en cours...</p>}
-          {errors.api && <p className="text-less text-rouge">{errors.api}</p>}
-        </div>
-      </form>
+          <div className="my-4 flex flex-col items-center gap-4">
+            <button className="bouton " type="submit" disabled={isSubmitting}>
+              Participer
+            </button>
+            {isSubmitting && <p className="text-less">Envoi en cours...</p>}
+            {errors.api && <p className="text-less text-rouge">{errors.api}</p>}
+            {submitted && (
+              <p className="text-less text-accentuation">
+                Votre participation a été enregistrée avec succès ! Nous vous
+                contacterons par email si vous êtes le gagnant.
+              </p>
+            )}
+          </div>
+        </form>
       </div>
     </div>
   );

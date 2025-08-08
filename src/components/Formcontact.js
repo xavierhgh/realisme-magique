@@ -2,7 +2,7 @@ import React from "react";
 import Labeltexte from "./Labeltexte";
 import { useState } from "react";
 
-function Formcontact({useRef}) {
+function Formcontact({ useRef }) {
   const [formData, setFormData] = useState({
     nom: "",
     prenom: "",
@@ -30,7 +30,7 @@ function Formcontact({useRef}) {
       setIsSubmitting(true);
       try {
         const response = await fetch(
-          "https://renardpoint.be/send-mail-contact.php",
+          "https://xavier.techniques-graphiques.be/realisme-magique/send-mail-contact.php",
           {
             method: "POST",
             headers: {
@@ -80,7 +80,11 @@ function Formcontact({useRef}) {
   };
 
   return (
-    <form ref={useRef} onSubmit={handleSubmit} className="flex flex-col gap-4 sm:w-full">
+    <form
+      ref={useRef}
+      onSubmit={handleSubmit}
+      className="flex flex-col gap-4 sm:w-full"
+    >
       <div className="flex flex-row gap-4">
         <Labeltexte
           label="Prénom"
@@ -130,18 +134,19 @@ function Formcontact({useRef}) {
         className="h-32"
       />
       <div className="my-4 flex flex-col items-center gap-4">
-        <button
-          className="bouton "
-          type="submit"
-          disabled={isSubmitting}
-        >
+        <button className="bouton " type="submit" disabled={isSubmitting}>
           Envoyer
         </button>
-        {submitted && (
-          <p className="text-less text-accentuation"> Message envoyez avec succès !Nous vous contacterons dans les plus brefs délais.</p>
-        )}
+
         {isSubmitting && <p className="text-less">Envoi en cours...</p>}
         {errors.api && <p className="text-less text-rouge">{errors.api}</p>}
+        {submitted && (
+          <p className="text-less text-accentuation">
+            {" "}
+            Message envoyez avec succès !Nous vous contacterons dans les plus
+            brefs délais.
+          </p>
+        )}
       </div>
     </form>
   );
