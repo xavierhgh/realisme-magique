@@ -42,7 +42,7 @@ function Images({ img, alt, className }) {
           ref={imgRef}
           src={img}
           alt={alt}
-          className="relative p-2 w-full h-auto max-w-none object-contain z-10"
+          className="relative p-2 w-full h-auto max-w-none object-contain z-10 drop-shadow-primary"
           onLoad={handleImageLoad}
         />
       </div>      

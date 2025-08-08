@@ -20,7 +20,7 @@ function Section({ img, titre, texte, imageFirst }) {
       className={`padding my-6 sm:flex ${sectionClass} sm:justify-around gap-14 items-center`}
       ref={imageFirst ? refGauche : refDroite}
     >
-      <Images img={img} className="sm:w-1/3" />
+      <Images img={img} className="sm:w-1/3 drop" />
       <div className="sm:w-1/3" ref={imageFirst ? refDroite : refGauche}>
         <h2 className="mt-6 mb-9">{titre}</h2>
         <p className="">{texte}</p>

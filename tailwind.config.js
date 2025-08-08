@@ -21,8 +21,9 @@ module.exports = {
     },
     extend: {
       dropShadow: {
-        'primary': '-6px -10px 10px rgba(244, 241, 236, 0.2)',
-        'shadowhover': '-6px -10px 10px rgba(101, 189, 71, 0.4)',
+        'primary': '-6px -10px 10px rgba(101, 189, 71, 0.4)',
+        'shadowhover': '-6px -10px 10px rgba(244, 241, 236, 0.2)',
+        'middle': '0px 0px 10px rgba(101, 189, 71, 0.4)',
       },
     },
   },

@@ -100,7 +100,7 @@ function Concours() {
   }
   return (
     <div className="padding">
-      <div className="bg-noirclair border border-accentuation p-4 flex flex-col sm:flex-row gap-8">
+      <div className="bg-noirclair border border-accentuation p-4 flex flex-col sm:flex-row gap-8 shadow-2xl drop-shadow-middle">
       <div ref={refGauche} className="flex flex-col gap-4 sm:w-1/2">
         <h2 className="mt-6 mb-5">Concours</h2>
         <p>
