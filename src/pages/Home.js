@@ -4,6 +4,7 @@ import Section from "../components/Section";
 import Jsonhome from "../data/Jsonhome";
 import Concours from "../components/Concours";
 import Partenaire from "../components/Partenaire";
+import Cookiebanner from "../components/Cookiebanner";
 
 
 
@@ -16,6 +17,7 @@ function Home({titre, texte}) {
       ))}
       <Concours />
       <Partenaire />
+      <Cookiebanner />
     </div>
   );
 }

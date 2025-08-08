@@ -13,7 +13,6 @@ function Images({ img, alt, className }) {
         width: rect.width,
         height: rect.height,
       });
-      console.log("Div loaded:", rect.width, rect.height);
       setLoaded(true);
     }
   };
