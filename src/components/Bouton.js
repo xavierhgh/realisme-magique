@@ -4,8 +4,8 @@ function Bouton({ label, onClick, active }) {
   return (
     <button
       onClick={onClick}
-      className={`btn ${
-        active ? "ring-2 ring-primary text-primary" : "text-noir hover:text-blanc"
+      className={`btn  ${
+        active ? "active ring-2 ring-primary text-primary" : "text-noir hover:text-blanc"
       }`}
     >
       <span className="before-effect"></span>

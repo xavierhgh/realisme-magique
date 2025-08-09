@@ -35,7 +35,7 @@ function Contact() {
             {Contacts.map((item, index) => (
               <ListeImg
                 key={index}
-                icon={item.icon}
+                icon={item.icon.default}
                 href={item.href}
                 text={item.text}
               />

@@ -110,3 +110,11 @@ p, .text-less {
 .btn > .btn-text {
   @apply relative z-20;
 }
+
+.active > .before-effect {
+  @apply bg-noir;
+}
+
+.active > .after-effect {
+  @apply border-0;
+}

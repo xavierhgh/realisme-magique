@@ -32,7 +32,7 @@ function Footer() {
         <h4>Contact</h4>
         <ul className="flex flex-col justify-center gap-2 my-4">
         {Contacts.map((item, index) => (
-            <ListeImg key={index} icon={item.icon} href={item.href} text={item.text} />
+            <ListeImg key={index} icon={item.icon.default} href={item.href} text={item.text} />
         ))}
         </ul>
       </div>

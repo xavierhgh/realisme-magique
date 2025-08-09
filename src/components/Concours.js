@@ -34,7 +34,7 @@ function Concours() {
       if (ref.current) {
         gsap.fromTo(
           ref.current,
-          { opacity: 0, y: 80 },
+          { opacity: 0, y: 250 },
           {
             opacity: 1,
             y: 0,
@@ -45,7 +45,6 @@ function Concours() {
               start: "top 100%",
               end: "bottom 0%",
               toggleActions: "play none none reverse",
-              markers: true,
             },
           }
         );
