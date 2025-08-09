@@ -34,7 +34,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
         }
 
         // Envoi de l'e-mail
-        $to = 'huyghexavier@gmail.com';
+        $to = 'emmanuel.lemal@he-ferrer.eu';
         $subject = $objet;
         $body = $message . "\n\nNom: $nom\nPrénom: $prenom\n";
         $header = "From: $email";

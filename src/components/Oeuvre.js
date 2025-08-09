@@ -32,7 +32,7 @@ function Oeuvre({ id, img, alt, title, by, category, onImageLoad }) {
   };
 
   return (
-    <article className={`grid-item w-full md:w-1/2 lg:w-1/3 p-6 ${category} hover:transform hover:scale-[103%]`} ref={articleRef}>
+    <article className={`grid-item w-full md:w-1/2 lg:w-1/3 xl:w-1/4 p-6 ${category} hover:transform hover:scale-[103%]`} ref={articleRef}>
       <Link to={`/oeuvre/${id}`} className={`relative`}>
         <div className="bg-accentuation rounded-br-[10rem]">
           <div

@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -12,15 +10,23 @@
   @apply max-w-none overflow-hidden;
 }
 .grid-sizer {
-  @apply w-full md:w-1/2 lg:w-1/3;
+  @apply w-full md:w-1/2 lg:w-1/3 xl:w-1/4;
 }
 html {
   font-size: 16px;
+  @apply scroll-smooth font-roboto;
 }
 
 @font-face {
   font-family: "flowerpower";
   src: url("./fonts/flowerpower.ttf") format("truetype");
+  font-display: swap; /* Met une police système le temps que la police se charge */
+}
+
+@font-face {
+  font-family: "roboto";
+  src: url("./fonts/Roboto-Regular.ttf") format("truetype");
+  font-display: swap;
 }
 
 body {
