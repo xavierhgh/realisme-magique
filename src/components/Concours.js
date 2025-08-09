@@ -1,6 +1,11 @@
 import React, { useEffect, useRef, useState } from "react";
 import Labeltexte from "./Labeltexte";
 import { scrollFromRight, scrollFromLeft } from "../utilitaire/gsapUtilitaire";
+import Arbres from "./Arbres";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 function Concours() {
   // aide avec une vidéo https://youtu.be/Ou-RUuujpXY https://youtu.be/c25pkDJ1xUI
@@ -18,9 +23,34 @@ function Concours() {
   const refDroite = useRef(null);
   const refGauche = useRef(null);
 
+  // Ajoute une ref pour chaque arbre
+  const arbresRefs = [useRef(null), useRef(null), useRef(null)];
+
   useEffect(() => {
     scrollFromRight(refDroite);
     scrollFromLeft(refGauche);
+
+    arbresRefs.forEach((ref, i) => {
+      if (ref.current) {
+        gsap.fromTo(
+          ref.current,
+          { opacity: 0, y: 80 },
+          {
+            opacity: 1,
+            y: 0,
+            duration: 1,
+            ease: "power2.out",
+            scrollTrigger: {
+              trigger: ref.current,
+              start: "top 100%",
+              end: "bottom 0%",
+              toggleActions: "play none none reverse",
+              markers: true,
+            },
+          }
+        );
+      }
+    });
   }, []);
 
   const handleChange = (e) => {
@@ -91,9 +121,12 @@ function Concours() {
     return errors;
   };
   return (
-    <div className="padding">
-      <div className="bg-noirclair border border-accentuation p-4 flex flex-col md:flex-row gap-8 shadow-2xl drop-shadow-middle">
-        <div ref={refGauche} className="flex flex-col gap-4 md:w-1/2">
+    <div className="padding relative">
+      <Arbres ref={arbresRefs[0]} className="-top-4 right-0 lg:top-0 lg:right-4" />
+      <Arbres ref={arbresRefs[1]} className="bottom-0 left-0 lg:top-24 lg:left-4" miroir="1" />
+      <Arbres ref={arbresRefs[2]} className="hidden lg:block top-[74%] right-[47%]" />
+      <div className="bg-noirclair border border-accentuation p-4 flex flex-col md:flex-row  justify-around gap-8 shadow-2xl drop-shadow-middle">
+        <div ref={refGauche} className="flex flex-col gap-4 md:w-1/3">
           <h2 className="mt-6 mb-5">Concours</h2>
           <p>
             Vous rêvez de découvrir une exposition exceptionnelle sans dépenser
@@ -108,7 +141,7 @@ function Concours() {
         </div>
         <form
           ref={refDroite}
-          className="flex flex-col gap-4 md:w-1/2"
+          className="flex flex-col gap-4 md:w-1/3"
           onSubmit={handleSubmit}
         >
           <div className="flex flex-row gap-4">

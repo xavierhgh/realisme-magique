@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 773.13 783.1">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #231f20;
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #231f20;
+        stroke-miterlimit: 10;
+        stroke-width: 25px;
+      }
+    </style>
+  </defs>
+  <polygon class="cls-1" points="712.38 484.25 699.88 167.66 712.38 180.16 60.74 180.16 73.24 167.66 73.24 615.44 60.74 602.94 569.19 615.44 60.74 627.94 48.24 628.25 48.24 615.44 48.24 167.66 48.24 155.16 60.74 155.16 712.38 155.16 725.38 155.16 724.88 167.66 712.38 484.25 712.38 484.25"/>
+  <polyline class="cls-2" points="712.38 167.66 385.96 430.99 60.74 167.66"/>
+</svg>

@@ -11,7 +11,6 @@ module.exports = {
       'blanc': '#F4F1EC',
       'blanc60': '#F4F1EC opacity(0.6)',
       'primary': '#65BD47',
-      'secondary': '#3F742F',
       'accentuation': '#6FBA40',
       'rouge': '#BD4747',
     },
