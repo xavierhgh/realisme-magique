@@ -1,7 +1,7 @@
 const Oeuvres = [
   {
     id: 1,
-    img: require("../images/forwtten_amongst_living_compressed.webp"),
+    img: require("../images/forwtten_amongst_living.webp"),
     category: "Sculpture",
     alt: "Arbre brûlé, socle en acier",
     title: "Forwotten amongst the Living, 2021",
@@ -23,7 +23,7 @@ const Oeuvres = [
   },
   {
     id: 2,
-    img: require("../images/family_extended_compressed.webp"),
+    img: require("../images/family_extended.webp"),
     category: "Sculpture",
     alt: "Description of your image",
     title: "Family (Extended), 2023",
@@ -46,7 +46,7 @@ mission de conservation se lie à des pratiques d'accumulation.`,
   },
   {
     id: 3,
-    img: require("../images/the_end_of_imagination_II_compressed.webp"),
+    img: require("../images/the_end_of_imagination_II.webp"),
     category: "Sculpture",
     alt: "Lavered composites of organic, inorganic, human and machine-made matter.",
     title: "The End of Imagination II, 2022",
@@ -73,7 +73,7 @@ de l'humain; elle devient distribuée, recombinante et planétaire.`,
   },
   {
     id: 4,
-    img: require("../images/rhombus_compressed.webp"),
+    img: require("../images/rhombus.webp"),
     category: "Photo",
     alt: "Series of 5 silver gelatin prints",
     title: "Rhombus, 1974 (reprinted 2022)",
@@ -97,7 +97,7 @@ le pouvoir qui lui est attribué dans de nombreuses mythologies et cosmologies.`
   },
   {
     id: 5,
-    img: require("../images/04_10_24_number3_compressed.webp"),
+    img: require("../images/04_10_24_number3.webp"),
     category: "Peinture",
     alt: "Ribbed glass, structural colours",
     title: "04.10.24 #3, 2024",
@@ -116,7 +116,7 @@ irisées, comme celles des plumes de paon ou des ailes de papillon.`,
   },
   {
     id: 6,
-    img: require("../images/la_pensee_ferale_compressed.webp"),
+    img: require("../images/la_pensee_ferale.webp"),
     category: "Photo",
     alt: "7 archival pigment prints on photo rag and texts",
     title: "La Pensée Férale, 2020",
@@ -136,7 +136,7 @@ pensée décolonisé, libéré des structures de la domestication occidentale.`,
   },
   {
     id: 7,
-    img: require("../images/leoparda_de_ojitos_compressed.webp"),
+    img: require("../images/leoparda_de_ojitos.webp"),
     category: "Peinture",
     alt: "Manual silkscreen print on 285g Rosapina paper from Casa Fabriano",
     title: "Leoparda de ojitos, 1977",
@@ -159,7 +159,7 @@ présentent des réflexions personnelles sur le coup d'État militaire de 1973 a
   },
   {
     id: 8,
-    img: require("../images/la_pensee_ferale2_compressed.webp"),
+    img: require("../images/la_pensee_ferale2.webp"),
     category: "Photo",
     alt: "7 archival pigment prints on photo rag and texts",
     title: "La Pensée Férale 2, 2020",
@@ -179,7 +179,7 @@ pensée décolonisé, libéré des structures de la domestication occidentale.`,
   },
   {
     id: 9,
-    img: require("../images/the_people_united_will_never_be_defeated_compressed.webp"),
+    img: require("../images/the_people_united_will_never_be_defeated.webp"),
     category: "Peinture",
     alt: "Silkscreen on paper",
     title:
@@ -203,7 +203,7 @@ présentent des réflexions personnelles sur le coup d'État militaire de 1973 a
   },
   {
     id: 10,
-    img: require("../images/the_recovered_image_no_1_compressed.webp"),
+    img: require("../images/the_recovered_image_no_1.webp"),
     category: "Sculpture",
     alt: "Des formes qui définissent des animaux.",
     title: "The Recovered Image No. 1, 2024",
@@ -212,7 +212,7 @@ présentent des réflexions personnelles sur le coup d'État militaire de 1973 a
   },
   {
     id: 11,
-    img: require("../images/tuban_compressed.webp"),
+    img: require("../images/tuban.webp"),
     category: "Sculpture",
     alt: "Une cuisine avec des expériences.",
     title: "Tuban, 2019-ongoing",
