@@ -23,10 +23,10 @@ function Cookiebanner() {
   }
 
   return (
-    <div className="fixed bottom-0 left-0 right-0 z-50 padding">
-      <div className="bg-noirclair border border-blanc p-4 flex flex-col gap-2">
+    <div className="fixed bottom-0 right-0 z-50 padding">
+      <div className="bg-noirclair lg:w-fit border border-blanc p-4 flex flex-col gap-2">
         <h3>🍪 Cookies 🍪</h3>
-        <div className="flex flex-col gap-2 lg:flex-row lg:justify-around lg:items-center">
+        <div className="flex flex-col gap-2  lg:flex-row lg:items-center">
           <p>
             En continuant à naviguer, vous acceptez notre utilisation des cookies.
           </p>
