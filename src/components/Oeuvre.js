@@ -1,7 +1,7 @@
 import React, { useRef, useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
-function Oeuvre({ id, img, alt, title, by, category, onImageLoad }) {
+function Oeuvre({ id, img, alt, title, by, category, onImageLoad, onClick }) {
   // Recalcule la taille lors du resize de la fenêtre
   useEffect(() => {
     function updateSize() {
@@ -33,7 +33,7 @@ function Oeuvre({ id, img, alt, title, by, category, onImageLoad }) {
 
   return (
     <article className={`grid-item w-full min-h-24 md:w-1/2 lg:w-1/3 xl:w-1/4 p-6 ${category} hover:transform hover:scale-[103%]`} ref={articleRef}>
-      <Link to={`/oeuvre/${id}`} className={`relative`}>
+      <Link to={`/oeuvre/${id}`} onClick={onClick} className={`relative`}>
         <div className="bg-accentuation rounded-br-[10rem]">
           <div
             className="inline-block absolute top-[100%] -translate-y-[100%] right-0 h-0 w-0 z-[2]"

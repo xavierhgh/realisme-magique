@@ -14,6 +14,7 @@ function Galerie() {
   // Ajout du filtre actif
   const [activeFilter, setActiveFilter] = useState("*");
 
+  // Compte le nombre d'images chargées
   const handleImageLoad = () => {
     setImagesLoaded((count) => count + 1);
   };
@@ -91,8 +92,9 @@ function Galerie() {
       </div>
       <div ref={gridRef} className="grid">
         <div className="grid-sizer"></div>
+        {/* onClick pour que quand j'ouvre une oeuvre, la page remonte en haut */}
         {Oeuvres.map((oeuvre) => (
-          <Oeuvre key={oeuvre.id} {...oeuvre} onImageLoad={handleImageLoad} />
+          <Oeuvre key={oeuvre.id} {...oeuvre} onImageLoad={handleImageLoad} onClick={() => {window.scrollTo(0, 0);}} />
         ))}
       </div>
     </div>
