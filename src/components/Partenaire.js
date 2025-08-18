@@ -1,13 +1,13 @@
 import React, { useRef, useEffect } from "react";
 import Partenaires from "../data/Partenaires";
 import LogoPartenaire from "./LogoPartenaire";
-import { scrollFromRight, scrollFromLeft } from "../utilitaire/gsapUtilitaire";
+import { scrollFromLeft } from "../utilitaire/gsapUtilitaire";
 
 function Partenaire() {
   // On crée la liste complète des partenaires à afficher
   const allPartenaires = [...Partenaires];
   const refGauche = useRef(null);
-
+  // Animation du défilement depuis la gauche
   useEffect(() => {
       scrollFromLeft(refGauche);
     }, []);

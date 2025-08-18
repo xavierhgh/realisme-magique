@@ -4,6 +4,7 @@ function Labeltexte({ label, id, placeholder, value, type, onChange, error, clas
     return (
         <div className={`flex flex-col gap-2 w-full`}>
           <label htmlFor={id} className="text-more flex flex-col items-start gap-2">{label} :</label>
+          {/* Affiche un input ou un textarea selon le type */}
           {id === 'message' ? (
             <textarea
               name={id}
@@ -25,6 +26,7 @@ function Labeltexte({ label, id, placeholder, value, type, onChange, error, clas
               className={`bg-noir text-less border text-blanc w-full border-blanc p-2 ${className} focus:border-primary focus:outline-none`}
             />
           )}
+          {/* Affiche un message d'erreur si présent */}
           {error && (
             <p className='text-less a text-rouge font-bold'>{error}</p>
           )}

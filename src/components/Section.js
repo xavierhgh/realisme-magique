@@ -5,7 +5,7 @@ import { scrollFromRight, scrollFromLeft } from "../utilitaire/gsapUtilitaire";
 function Section({ img, titre, texte, imageFirst }) {
   const refDroite = useRef(null);
   const refGauche = useRef(null);
-
+  // Animation du défilement depuis la droite et la gauche
   useEffect(() => {
     scrollFromRight(refDroite);
     scrollFromLeft(refGauche);

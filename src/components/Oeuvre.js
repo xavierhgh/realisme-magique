@@ -17,9 +17,12 @@ function Oeuvre({ id, img, alt, title, by, category, onImageLoad, onClick }) {
       window.removeEventListener("resize", updateSize);
     };
   }, []);
+
   const articleRef = useRef(null);
+  // Références pour la largeur et la hauteur avec une valeur de base de 200
   const [width, setWidth] = useState(200);
   const [height, setHeight] = useState(200);
+
   // Verifie si l'image est chargée
   const handleImageLoad = (e) => {
     if (onImageLoad) onImageLoad(e);

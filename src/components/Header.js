@@ -4,13 +4,13 @@ import logo from "../images/Logo.png";
 
 function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
-
+  // Tableau de la navigation
   const linkArray = [
     { href: "/", text: "Accueil" },
     { href: "/galerie", text: "Galerie" },
     { href: "/contact", text: "Contact" },
   ];
-
+  // Vérifie si c'est lundi (car fermé le lundi)
   // 1 = lundi
   const isMonday = new Date().getDay() === 1;
 
@@ -27,6 +27,7 @@ function Header() {
           </Link>
 
           <p className="text-more">
+            {/* Si c'est lundi, afficher "Fermé aujourd'hui" sinon "Ouvert aujourd'hui" */}
             {isMonday ? "Fermé aujourd'hui" : "Ouvert aujourd'hui"}
           </p>
         </div>

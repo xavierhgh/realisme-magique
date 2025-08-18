@@ -25,7 +25,7 @@ function Concours() {
 
   // Ajoute une ref pour chaque arbre
   const arbresRefs = [useRef(null), useRef(null), useRef(null)];
-
+  // Animation pour les arbres
   useEffect(() => {
     scrollFromRight(refDroite);
     scrollFromLeft(refGauche);
@@ -51,14 +51,14 @@ function Concours() {
       }
     });
   }, []);
-
+  // Quand les inputs changent ça met à jour les données
   const handleChange = (e) => {
     setFormData({
       ...formData,
       [e.target.id]: e.target.value,
     });
   };
-
+  // L'envoie du formulaire
   const handleSubmit = async (e) => {
     e.preventDefault();
     const validationErrors = validate(formData);

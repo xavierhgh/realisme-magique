@@ -6,7 +6,7 @@ function Images({ img, alt, className }) {
   const imgRef = useRef(null);
   const containerRef = useRef(null);
 
-  // Fonction pour mettre à jour les dimensions du container
+  // Mettre à jour les dimensions du container
   const updateDimensions = () => {
     if (containerRef.current) {
       const rect = containerRef.current.getBoundingClientRect();
@@ -17,7 +17,7 @@ function Images({ img, alt, className }) {
     }
   };
 
-  // Quand l'image est chargée, on récupère les dimensions
+  // Quand l'image est chargé on récupère les dimensions
   const handleImageLoad = () => {
     updateDimensions();
     setLoaded(true);

@@ -14,14 +14,14 @@ function Formcontact({ useRef }) {
   const [errors, setErrors] = useState({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
-
+  // Quand les inputs changent ça met à jour les données
   const handleChange = (e) => {
     setFormData({
       ...formData,
       [e.target.id]: e.target.value,
     });
   };
-
+  // L'envoie des formulaires
   const handleSubmit = async (e) => {
     e.preventDefault();
     const validationErrors = validate(formData);

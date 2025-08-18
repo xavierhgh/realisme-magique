@@ -18,7 +18,7 @@ function Galerie() {
   const handleImageLoad = () => {
     setImagesLoaded((count) => count + 1);
   };
-
+// Une fois que toutes les images sont chargées ça recharge isotope
   useEffect(() => {
     if (isotope && imagesLoaded === totalImages) {
       isotope.layout();

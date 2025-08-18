@@ -11,7 +11,7 @@ function OeuvreDetail() {
 
   const refDroite = useRef(null);
   const refGauche = useRef(null);
-
+// Animation du défilement depuis la droite et la gauche
   useEffect(() => {
     scrollFromRight(refDroite);
     scrollFromLeft(refGauche);

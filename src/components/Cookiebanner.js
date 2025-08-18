@@ -4,7 +4,7 @@ import Bouton from "./Bouton";
 
 function Cookiebanner() {
   const [isVisible, setIsVisible] = useState(false);
-
+  // vérifier si le cookie existe et s'il est accepté
   useEffect(() => {
     const consent = Cookies.get("cookieAccept");
     if (!consent || consent !== "accepted") {
@@ -17,7 +17,7 @@ function Cookiebanner() {
     Cookies.set("cookieAccept", "accepted", { expires: 365, path: "/" });
     setIsVisible(false);
   };
-
+  // Masquer le bandeau si le cookie est accepté
   if (!isVisible) {
     return null;
   }
