@@ -4,7 +4,7 @@ import Main from './components/Main';
 
 function App() {
   return (
-    <div className='bg-noir'>
+    <div className='bg-noir formefond'>
       <Main />
     </div>
   );

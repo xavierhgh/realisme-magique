@@ -8,7 +8,7 @@ import Cookiebanner from "../components/Cookiebanner";
 
 
 
-function Home({titre, texte}) {
+function Home() {
   return (
     <div>
       <Hero />

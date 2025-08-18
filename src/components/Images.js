@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 
 function Images({ img, alt, className }) {
   const [loaded, setLoaded] = useState(false);
@@ -6,16 +6,32 @@ function Images({ img, alt, className }) {
   const imgRef = useRef(null);
   const containerRef = useRef(null);
 
-  const handleImageLoad = () => {
+  // Fonction pour mettre à jour les dimensions du container
+  const updateDimensions = () => {
     if (containerRef.current) {
       const rect = containerRef.current.getBoundingClientRect();
       setDimensions({
         width: rect.width,
         height: rect.height,
       });
-      setLoaded(true);
     }
   };
+
+  // Quand l'image est chargée, on récupère les dimensions
+  const handleImageLoad = () => {
+    updateDimensions();
+    setLoaded(true);
+  };
+
+  // Mettre à jour les dimensions lors du resize de la fenêtre
+  useEffect(() => {
+    if (loaded) {
+      window.addEventListener("resize", updateDimensions);
+      // Met à jour une fois au cas où le resize a eu lieu avant le load
+      updateDimensions();
+      return () => window.removeEventListener("resize", updateDimensions);
+    }
+  }, [loaded]);
 
   return (
     <div
@@ -37,14 +53,14 @@ function Images({ img, alt, className }) {
             borderLeft: "12px solid transparent",
           }}
         ></div>
-        <img 
+        <img
           ref={imgRef}
           src={img}
           alt={alt}
           className="relative p-2 w-full h-auto max-w-none object-contain z-10 drop-shadow-primary"
           onLoad={handleImageLoad}
         />
-      </div>      
+      </div>
     </div>
   );
 }
