@@ -33,8 +33,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
         }
 
         // Envoi de l'e-mail
-        $to = 'huyghexavier@gmail.com';
-        // $to = 'emmanuel.lemal@he-ferrer.eu';
+        $to = 'emmanuel.lemal@he-ferrer.eu';
         $subject = "Participation au concours par $firstname $name";
         $body = "Participation au concours ; Nom: $name\n Prénom: $firstname\nEmail: $email";
         $header = "From: $email";
